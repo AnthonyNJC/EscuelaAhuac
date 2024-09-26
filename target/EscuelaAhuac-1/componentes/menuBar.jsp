@@ -15,13 +15,13 @@
             <li><a href="#section2">Who we are?</a></li>
             <li><a href="#section3">What we do?</a></li>
             <li><a href="#section3">How it works?</a></li>
-            <li><a href="https://templatemo.com/about" rel="sponsored" class="external">Acceder</a></li>
+            <li><a href="dashboard/index.jsp" rel="sponsored" class="external">Acceder</a></li>
           </ul>
         </li>
         <li><a href="#section4">Noticias</a></li>
         <!-- <li><a href="#section5">Video</a></li> -->
         <li><a href="#section6">Contacto</a></li>
-        <li><a href="https://templatemo.com" class="external text-warning">Acceder</a></li>
+        <li><a href="dashboard/index.jsp" class="external text-warning">Acceder</a></li>
       </ul>
     </nav>
   </header>
