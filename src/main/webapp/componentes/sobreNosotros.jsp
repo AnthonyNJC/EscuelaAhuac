@@ -1,55 +1,25 @@
-  <section class="section why-us" data-section="section2">
+ <section class="section video" data-section="section5">
     <div class="container">
       <div class="row">
-        <div class="col-md-12">
-          <div class="section-heading">
-            <h2>Porque Nosotros?</h2>
+        <div class="col-md-6 align-self-center">
+          <div class="left-content">
+            <span>Sobre Nosotros!</span>
+             <h4 style="font-size: 2.6rem;"><em>Colegio </em>Ahuac</h4>   
+            <p>En el Colegio Nuestra Señora de Fátima, ubicado en el corazón de Ahuac, ofrecemos una educación de calidad desde los niveles de inicial y primaria. Nuestro compromiso es formar niños con valores, capacidades y conocimientos para enfrentar el futuro con éxito. 
+                <br><br>Acompáñanos en este recorrido por nuestra historia con el video de la inauguración, un momento clave que marca el inicio de nuestro compromiso con la educación de calidad.
+                <br><br><a rel="nofollow" href="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2FGobiernoJunin%2Fvideos%2F443772350352155%2F&show_text=false&width=560&t=0" target="_parent" class="play" >Mira el video</a> de la inauguración para más detalles.</p>
+            <div class="main-button"><a rel="nofollow" href="https://fb.com/templatemo" target="_parent">Más información</a></div>
           </div>
         </div>
-        <div class="col-md-12">
-          <div id='tabs'>
-            <ul>
-              <li><a href='#tabs-1'>Inicial</a></li>
-              <li><a href='#tabs-2'>Primaria</a></li>
-              <li><a href='#tabs-3'>Quality Meeting</a></li>
-            </ul>
-            <section class='tabs-content'>
-              <article id='tabs-1'>
-                <div class="row">
-                  <div class="col-md-6">
-                    <img src="assets/images/choose-us-image-01.png" alt="">
-                  </div>
-                  <div class="col-md-6">
-                    <h4>Educación Integral</h4>
-                    <p>Grad School is free educational HTML template with Bootstrap 4.5.2 CSS layout. Feel free to use it for educational or commercial purposes. You may want to make <a href="https://paypal.me/templatemo" target="_parent" rel="sponsored">a little donation</a> to TemplateMo. Please tell your friends about us. Thank you.</p>
-                  </div>
-                </div>
-              </article>
-              <article id='tabs-2'>
-                <div class="row">
-                  <div class="col-md-6">
-                    <img src="assets/images/choose-us-image-02.png" alt="">
-                  </div>
-                  <div class="col-md-6">
-                    <h4>Educacion de Calidad</h4>
-                    <p>You can modify this HTML layout by editing contents and adding more pages as you needed. Since this template has options to add dropdown menus, you can put many HTML pages.</p> 
-                    <p>Suspendisse tincidunt, magna ut finibus rutrum, libero dolor euismod odio, nec interdum quam felis non ante.</p>
-                  </div>
-                </div>
-              </article>
-              <article id='tabs-3'>
-                <div class="row">
-                  <div class="col-md-6">
-                    <img src="assets/images/choose-us-image-03.png" alt="">
-                  </div>
-                  <div class="col-md-6">
-                    <h4>Quality Meeting</h4>
-                    <p>You are NOT allowed to redistribute this template ZIP file on any template collection website. However, you can use this template to convert into a specific theme for any kind of CMS platform such as WordPress. For more information, you shall <a rel="nofollow" href="https://templatemo.com/contact" target="_parent">contact TemplateMo</a> now.</p>
-                  </div>
-                </div>
-              </article>
-            </section>
-          </div>
+        <div class="col-md-6">
+          <article class="video-item">
+            <div class="video-caption">
+              <h4>Nuestra Señora de Fátima</h4>
+            </div>
+            <figure>
+                <a href="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2FGobiernoJunin%2Fvideos%2F443772350352155%2F&show_text=false&width=560&t=0" class="play"><img src="assets/images/ahuac.jpg "></a> 
+            </figure>
+          </article>
         </div>
       </div>
     </div>

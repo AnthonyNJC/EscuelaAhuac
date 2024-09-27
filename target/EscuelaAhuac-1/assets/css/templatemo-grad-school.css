@@ -469,7 +469,7 @@ section.features .col-4 {
     margin-bottom: 10px;
   }
   .features-content h4 {
-    font-size: 14px;
+    font-size: 16px;
   }
   .features-content p {
     display: none;
@@ -577,7 +577,7 @@ section.why-us {
 }
 #tabs h4 {
     margin-top: 60px;
-    font-size: 32px;
+    font-size: 36px;
     font-weight: 700;
     letter-spacing: 1px;
     color: #fff;
@@ -586,7 +586,7 @@ section.why-us {
 
 #tabs p {
     color: #fff;
-    font-size: 15px;
+    font-size: 17px;
     line-height: 28px;
 }
 
@@ -633,7 +633,7 @@ section.coming-soon .continer .counter div {
 }
 section.coming-soon .continer h4 {
     margin-top: 100px;
-    font-size: 30px;
+    font-size: 35px;
     color: #fff;
     font-weight: 800;
     letter-spacing: 0.5px;
@@ -904,7 +904,7 @@ section.video .left-content span {
 
 section.video .left-content h4 {
     margin-top: 20px;
-    font-size: 30px;
+    font-size: 35px;
     color: #fff;
     font-weight: 800;
     letter-spacing: 0.5px;
@@ -988,7 +988,7 @@ section.video .left-content .main-button {
 }
 
 .video-item .video-caption h4 {
-    font-size: 20px;
+    font-size: 25px;
     text-transform: uppercase;
     font-weight: 700;
     letter-spacing: 1px;
@@ -1537,7 +1537,7 @@ footer p {
     margin-bottom: 0px;
     padding: 25px 0px;
     color: #fff;
-    font-size: 13px;
+    font-size: 15px;
     text-transform: uppercase;
     font-weight: 600;
     letter-spacing: 0.5px;
@@ -1587,7 +1587,7 @@ footer p a:hover {
 
 @media screen and (max-width: 767px) {
   footer p {
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 600;
     letter-spacing: 0.25px;
   }
