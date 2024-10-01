@@ -13,15 +13,6 @@
 <!--llamando a la objetivos -->
 <%@include file="componentes/objetivos.jsp" %>
 
-<!--llamando a la barra desglosante -->
-<%@include file="componentes/barraDesglose.jsp" %>
-
-<!--llamando a la seccion de noticias -->
-<%@include file="componentes/noticias.jsp" %>
-
-<!--llamando a la seccion de cinformacion con video -->
-<%@include file="componentes/sobreNosotros.jsp" %>
-
 <!--llamando a la seccion de contacto -->
 <%@include file="componentes/contacto.jsp" %>
 

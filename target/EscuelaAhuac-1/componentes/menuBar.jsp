@@ -10,18 +10,10 @@
         <nav id="menu" class="main-nav" role="navigation">
             <ul class="main-menu">
                 <li><a href="#section1">Inicio</a></li>
-                <li class="has-submenu"><a href="#section2">Sobre Nosotros</a>
-                    <ul class="sub-menu">
-                        <li><a href="#section2">Objetivos</a></li>
-                        <li><a href="#section3">What we do?</a></li>
-                        <li><a href="#section3">How it works?</a></li>
-                        <li><a href="dashboard/index.jsp" rel="sponsored" class="external">Acceder</a></li>
-                    </ul>
-                </li>
                 <li class="has-submenu"><a href="#section4">Niveles</a>
                     <ul class="sub-menu">
-                        <li><a href="#section2" >Inicial</a></li>
-                        <li><a href="#section3">Primaria</a></li>
+                        <li><a href="kinder.jsp" class="external">Inicial</a></li>
+                        <li><a href="primaria.jsp" class="external">Primaria</a></li>
                     </ul>
                 </li>
                 <li><a href="#section4">Noticias</a></li>

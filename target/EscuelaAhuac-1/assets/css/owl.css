@@ -184,3 +184,32 @@
   z-index: 1;
   height: 100%;
   width: 100%; }
+
+.cursos {
+    padding: 20px; /* Añade un poco de padding */
+}
+
+.course {
+    display: flex; /* Utiliza flexbox para la alineación */
+    align-items: flex-start; /* Alinea la imagen y el texto al inicio */
+    margin-bottom: 15px; /* Espacio entre los cursos */
+}
+
+.course-icon {
+    width: 60px; /* Ajusta el tamaño del icono */
+    height: auto; /* Mantiene la proporción original */
+    margin-right: 15px; /* Espacio entre la imagen y el texto */
+}
+
+.course-content {
+    flex: 1; /* Permite que el contenido ocupe el espacio disponible */
+}
+
+.course-card {
+    background-color: #f9f9f9; /* Fondo para cada tarjeta de curso */
+    padding: 15px; /* Espacio interno de la tarjeta */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    display: flex;
+     align-items: flex-start;
+}

@@ -9,7 +9,7 @@
               <h6>Colegio Nuestra Señora de Fatima</h6>
               <h2><em>Colegio</em> Ahuac</h2>
               <div class="main-button">
-                  <div class="scroll-to-section"><a href="#section2">Descubre más</a></div>
+                  <div class="scroll-to-section"><a href="#section5">Descubre más</a></div>
               </div>
           </div>
       </div>
@@ -29,7 +29,7 @@
               <div class="content-hide">
                 <p>Somos un colegio de la region Ahuac Chupaca que brinda educacion en los niveles primario y secundario</p>
                 <p class="hidden-sm">EAE MANITO</p>
-                <div class="scroll-to-section"><a href="#section2">Más Información</a></div>
+                <div class="scroll-to-section"><a href="#section5">Más Información</a></div>
             </div>
             </div>
           </div>
@@ -38,12 +38,12 @@
           <div class="features-post second-features">
             <div class="features-content">
               <div class="content-show">
-                <h4><i class="fa fa-graduation-cap"></i>Matricula</h4>
+                <h4><i class="fa fa-graduation-cap"></i>Objetivos</h4>
               </div>
               <div class="content-hide">
-                <p>Curabitur id eros vehicula, tincidunt libero eu, lobortis mi. In mollis eros a posuere imperdiet. Donec maximus elementum ex. Cras convallis ex rhoncus, laoreet libero eu, vehicula libero.</p>
+                <p>"Nuestros valores se adaptan a los desafíos actuales y guían nuestra misión y visión, formando una comunidad educativa comprometida con el crecimiento local y global."</p>
                 <p class="hidden-sm">Curabitur id eros vehicula, tincidunt libero eu, lobortis mi. In mollis eros a posuere imperdiet.</p>
-                <div class="scroll-to-section"><a href="#section3">Más Información.</a></div>
+                <div class="scroll-to-section"><a href="#section2">Más Información.</a></div>
             </div>
             </div>
           </div>
@@ -52,12 +52,12 @@
           <div class="features-post third-features">
             <div class="features-content">
               <div class="content-show">
-                <h4><i class="fa fa-book"></i>Noticias</h4>
+                <h4><i class="fa fa-book"></i>Ubícanos</h4>
               </div>
               <div class="content-hide">
-                <p>Enterate de actividades que se realizan dentro del colegio</p>
-                <p class="hidden-sm">EAE MANITO 3</p>
-                <div class="scroll-to-section"><a href="#section4">Más Información.</a></div>
+                <p>Descubre nuestra ubicación y cómo llegar a nuestra institución. Informate cómo contactarnos.</p>
+                <p class="hidden-sm"></p>
+                <div class="scroll-to-section"><a href="#section6">Más Información.</a></div>
             </div>
             </div>
           </div>
