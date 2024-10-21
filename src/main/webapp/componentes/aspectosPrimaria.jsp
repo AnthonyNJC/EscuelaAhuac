@@ -1,4 +1,4 @@
-<section class="section why-us" data-section="section2">
+<section class="section why-us-primaria" data-section="section2">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
@@ -17,26 +17,16 @@
                             <div class="row align-items-center">
                                 <div class="col-md-6">
                                     <h4>Nosotros</h4>
-                                    <p>El enfoque de nuestro plan de estudios en la Escuela Superior es desarrollar el conocimiento 
-                                        específico de la materia anclada y la comprensión interdisciplinaria, en última instancia, 
-                                        desarrollar jóvenes inquisitivos, conocedores y afectuosos que estén motivados para tener éxito
-                                        en la vida.
+                                    <p>A través de un currículo diversificado y dinámico, 
+                                        nuestros estudiantes exploran temas complejos de manera significativa. 
+                                        Nuestros educadores especializados promueven el aprendizaje colaborativo 
+                                        y el pensamiento crítico, animando a los niños a expresar sus ideas y a 
+                                        cuestionar el mundo que les rodea.
 
-
-                                        Desde los grados 6 hasta el Formulario IV, nuestros estudiantes, a través del MYP, 
-                                        estudian un marco desafiante que alienta a los estudiantes a establecer conexiones prácticas 
-                                        entre sus estudios y el mundo real, que es inclusivo por diseño; los estudiantes de todos
-                                        los intereses y habilidades académicas pueden beneficiarse de su participación. Culmina en el
-                                        Proyecto Personal, donde deciden sobre qué quieren aprender, identifican lo que ya saben, 
-                                        descubren lo que necesitarán saber para completar el proyecto y crean una propuesta o criterios 
-                                        para completarlo. En los Formularios V y VI, los últimos dos años de la Escuela Secundaria, el 
-                                        Programa del Diploma ayuda a los estudiantes a hacer preguntas desafiantes, pensar críticamente 
-                                        y desarrollar habilidades de investigación comprobadas para ayudarlos en la educación superior.
-
-                                        Los estudiantes en la Escuela Superior tienen cursos especializados en Arte Visual, Artes Teatrales,
-                                        Música, Educación Física y de Salud y Diseño. En estos cursos, los estudiantes son capaces de ampliar 
-                                        y desarrollar nuevas habilidades, y tienen la oportunidad de ver su aprendizaje completo a través de 
-                                        diferentes lentes.</p>
+                                        Además, enfatizamos el desarrollo de habilidades esenciales para la vida, 
+                                        como la resolución de problemas y la empatía. Nuestro objetivo es que los 
+                                        estudiantes se conviertan en aprendices autónomos y resilientes, listos para 
+                                        enfrentar los retos del futuro con confianza y creatividad.</p>
                                 </div>
                                 <div class="col-md-6 ">
                                     <img src="assets/images/choose-us-image-01.png" alt=""><br>

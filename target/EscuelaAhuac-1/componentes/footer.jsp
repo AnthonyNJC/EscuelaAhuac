@@ -23,10 +23,10 @@
             <div class="col-md-4">
                 <h5 class="mb-3 text-warning">Contacto</h5>
                 <p class="mb-2">
-                    Dirección: Calle Ejemplo 123<br>
-                    Ciudad, Estado, Código Postal<br>
-                    Teléfono: (123) 456-7890<br>
-                    Email: <a href="mailto:info@colegioejemplo.edu">info@colegioejemplo.edu</a>
+                    Dirección: Tupac Amaru con Minerva<br>
+                    Chupaca-ahuac<br>
+                   <!--  Teléfono: (123) 456-7890<br>
+                    Email: <a href="mailto:info@colegioejemplo.edu">info@colegioejemplo.edu</a> -->
                 </p>
             </div>
         </div>

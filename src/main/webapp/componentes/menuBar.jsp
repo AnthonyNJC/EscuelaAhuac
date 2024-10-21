@@ -4,12 +4,12 @@
     <!--header-->
     <header class="main-header clearfix" role="header">
         <div class="logo">
-            <a href="#"><em>Colegio</em> Ahuac</a>
+            <a href="#"><em>Escuela</em> Ahuac</a>
         </div>
         <a href="#menu" class="menu-link"><i class="fa fa-bars"></i></a>
         <nav id="menu" class="main-nav" role="navigation">
             <ul class="main-menu">
-                <li><a href="#section1">Inicio</a></li>
+                <li><a href="index.jsp" class="external">Inicio</a></li>
                 <li class="has-submenu"><a href="#section4">Niveles</a>
                     <ul class="sub-menu">
                         <li><a href="kinder.jsp" class="external">Inicial</a></li>
@@ -19,7 +19,7 @@
                 <li><a href="#section4">Noticias</a></li>
                 <!-- <li><a href="#section5">Video</a></li> -->
                 <li><a href="#section6">Contacto</a></li>
-                <li><a href="dashboard/index.jsp" class="external text-warning">Acceder</a></li>
+                <li><a href="login.jsp" class="external text-warning">Acceder</a></li>
             </ul> 
         </nav>
     </header>

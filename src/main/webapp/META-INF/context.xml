@@ -1,2 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Context path="/EscuelaAhuac"/>
+<Context path="/EscuelaAhuac">
+  <Resource auth="Container" driverClassName="com.mysql.cj.jdbc.Driver" maxActive="20" maxIdle="10" maxWait="-1" name="DataBase_EscuelaAhuac" password="yosoyyo" type="javax.sql.DataSource" url="jdbc:mysql://localhost:3306/escuela_ahuac?serverTimezone=UTC" username="root"/>
+</Context>
