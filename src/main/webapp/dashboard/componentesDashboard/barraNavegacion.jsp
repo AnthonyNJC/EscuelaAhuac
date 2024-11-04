@@ -18,7 +18,6 @@
                         <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                             <nav class="sb-sidenav-menu-nested nav">
                                 <a class="nav-link" href="mostrarUsuarios.jsp">Mostrar Usuarios</a>
-                                <a class="nav-link" href="crearUsuarios.jsp">Crear Usuarios</a>
                             </nav>
                         </div>
                         
