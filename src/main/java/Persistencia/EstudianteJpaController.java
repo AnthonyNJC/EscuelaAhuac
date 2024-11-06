@@ -11,7 +11,6 @@ import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
 import Logica.Apoderado;
 import Logica.Estudiante;
-import Logica.Grado;
 import Persistencia.exceptions.NonexistentEntityException;
 import java.util.List;
 import javax.persistence.EntityManager;
@@ -32,7 +31,6 @@ public class EstudianteJpaController implements Serializable {
     public EntityManager getEntityManager() {
         return emf.createEntityManager();
     }
-    
     public EstudianteJpaController() {
         emf=Persistence.createEntityManagerFactory("Proyecto_EscuelaAhuac_PU");
     }
@@ -47,11 +45,6 @@ public class EstudianteJpaController implements Serializable {
                 apoderado = em.getReference(apoderado.getClass(), apoderado.getId());
                 estudiante.setApoderado(apoderado);
             }
-            Grado grado = estudiante.getGrado();
-            if (grado != null) {
-                grado = em.getReference(grado.getClass(), grado.getIdGrado());
-                estudiante.setGrado(grado);
-            }
             em.persist(estudiante);
             if (apoderado != null) {
                 Estudiante oldEstudianteOfApoderado = apoderado.getEstudiante();
@@ -61,10 +54,6 @@ public class EstudianteJpaController implements Serializable {
                 }
                 apoderado.setEstudiante(estudiante);
                 apoderado = em.merge(apoderado);
-            }
-            if (grado != null) {
-                grado.getListaEstudiantes().add(estudiante);
-                grado = em.merge(grado);
             }
             em.getTransaction().commit();
         } finally {
@@ -82,15 +71,9 @@ public class EstudianteJpaController implements Serializable {
             Estudiante persistentEstudiante = em.find(Estudiante.class, estudiante.getId());
             Apoderado apoderadoOld = persistentEstudiante.getApoderado();
             Apoderado apoderadoNew = estudiante.getApoderado();
-            Grado gradoOld = persistentEstudiante.getGrado();
-            Grado gradoNew = estudiante.getGrado();
             if (apoderadoNew != null) {
                 apoderadoNew = em.getReference(apoderadoNew.getClass(), apoderadoNew.getId());
                 estudiante.setApoderado(apoderadoNew);
-            }
-            if (gradoNew != null) {
-                gradoNew = em.getReference(gradoNew.getClass(), gradoNew.getIdGrado());
-                estudiante.setGrado(gradoNew);
             }
             estudiante = em.merge(estudiante);
             if (apoderadoOld != null && !apoderadoOld.equals(apoderadoNew)) {
@@ -105,14 +88,6 @@ public class EstudianteJpaController implements Serializable {
                 }
                 apoderadoNew.setEstudiante(estudiante);
                 apoderadoNew = em.merge(apoderadoNew);
-            }
-            if (gradoOld != null && !gradoOld.equals(gradoNew)) {
-                gradoOld.getListaEstudiantes().remove(estudiante);
-                gradoOld = em.merge(gradoOld);
-            }
-            if (gradoNew != null && !gradoNew.equals(gradoOld)) {
-                gradoNew.getListaEstudiantes().add(estudiante);
-                gradoNew = em.merge(gradoNew);
             }
             em.getTransaction().commit();
         } catch (Exception ex) {
@@ -147,11 +122,6 @@ public class EstudianteJpaController implements Serializable {
             if (apoderado != null) {
                 apoderado.setEstudiante(null);
                 apoderado = em.merge(apoderado);
-            }
-            Grado grado = estudiante.getGrado();
-            if (grado != null) {
-                grado.getListaEstudiantes().remove(estudiante);
-                grado = em.merge(grado);
             }
             em.remove(estudiante);
             em.getTransaction().commit();

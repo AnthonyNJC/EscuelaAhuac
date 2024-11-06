@@ -6,7 +6,6 @@
     <class>Logica.Apoderado</class>
     <class>Logica.Docente</class>
     <class>Logica.Estudiante</class>
-    <class>Logica.Grado</class>
     <class>Logica.Persona</class>
     <class>Logica.Usuario</class>
     <exclude-unlisted-classes>false</exclude-unlisted-classes>

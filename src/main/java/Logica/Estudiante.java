@@ -8,18 +8,16 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 
 @Entity
-public class Estudiante extends Persona implements Serializable{
+public class Estudiante extends Persona implements Serializable {
     
     @OneToOne
     private Apoderado apoderado;
-    @ManyToOne
-    @JoinColumn(name = "id_estudiante_grado")
-    private Grado grado;
+    private String grado;
 
     public Estudiante() {
     }
 
-    public Estudiante(Apoderado apoderado, Grado grado, int id, String dni, String nombre, String apellido, Date fechaNacimiento) {
+    public Estudiante(Apoderado apoderado, String grado, int id, String dni, String nombre, String apellido, Date fechaNacimiento) {
         super(id, dni, nombre, apellido, fechaNacimiento);
         this.apoderado = apoderado;
         this.grado = grado;
@@ -33,11 +31,11 @@ public class Estudiante extends Persona implements Serializable{
         this.apoderado = apoderado;
     }
 
-    public Grado getGrado() {
+    public String getGrado() {
         return grado;
     }
 
-    public void setGrado(Grado grado) {
+    public void setGrado(String grado) {
         this.grado = grado;
     }
     

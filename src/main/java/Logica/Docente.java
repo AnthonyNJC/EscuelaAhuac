@@ -6,21 +6,19 @@ import javax.persistence.Entity;
 import javax.persistence.OneToOne;
 
 @Entity
-public class Docente extends Persona implements Serializable{
+public class Docente extends Persona implements Serializable {
     
     
     private String telefono;
     @OneToOne
     private Usuario usuario;
-    @OneToOne
-    private Grado grado;
 
-    public Docente(String telefono, Usuario usuario, Grado grado, int id, String dni, String nombre, String apellido, Date fechaNacimiento) {
+    public Docente(String telefono, Usuario usuario, int id, String dni, String nombre, String apellido, Date fechaNacimiento) {
         super(id, dni, nombre, apellido, fechaNacimiento);
         this.telefono = telefono;
         this.usuario = usuario;
-        this.grado = grado;
     }
+    
 
     public Docente() {
     }
@@ -43,15 +41,6 @@ public class Docente extends Persona implements Serializable{
     public void setUsuario(Usuario usuario) {
         this.usuario = usuario;
     }
-
-    public Grado getGrado() {
-        return grado;
-    }
-
-    public void setGrado(Grado grado) {
-        this.grado = grado;
-    }
-    
     
     
     

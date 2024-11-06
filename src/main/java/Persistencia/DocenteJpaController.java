@@ -11,7 +11,6 @@ import javax.persistence.EntityNotFoundException;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
 import Logica.Usuario;
-import Logica.Grado;
 import Persistencia.exceptions.NonexistentEntityException;
 import java.util.List;
 import javax.persistence.EntityManager;
@@ -46,11 +45,6 @@ public class DocenteJpaController implements Serializable {
                 usuario = em.getReference(usuario.getClass(), usuario.getIdUsuario());
                 docente.setUsuario(usuario);
             }
-            Grado grado = docente.getGrado();
-            if (grado != null) {
-                grado = em.getReference(grado.getClass(), grado.getIdGrado());
-                docente.setGrado(grado);
-            }
             em.persist(docente);
             if (usuario != null) {
                 Docente oldDocenteOfUsuario = usuario.getDocente();
@@ -60,15 +54,6 @@ public class DocenteJpaController implements Serializable {
                 }
                 usuario.setDocente(docente);
                 usuario = em.merge(usuario);
-            }
-            if (grado != null) {
-                Docente oldDocenteOfGrado = grado.getDocente();
-                if (oldDocenteOfGrado != null) {
-                    oldDocenteOfGrado.setGrado(null);
-                    oldDocenteOfGrado = em.merge(oldDocenteOfGrado);
-                }
-                grado.setDocente(docente);
-                grado = em.merge(grado);
             }
             em.getTransaction().commit();
         } finally {
@@ -86,15 +71,9 @@ public class DocenteJpaController implements Serializable {
             Docente persistentDocente = em.find(Docente.class, docente.getId());
             Usuario usuarioOld = persistentDocente.getUsuario();
             Usuario usuarioNew = docente.getUsuario();
-            Grado gradoOld = persistentDocente.getGrado();
-            Grado gradoNew = docente.getGrado();
             if (usuarioNew != null) {
                 usuarioNew = em.getReference(usuarioNew.getClass(), usuarioNew.getIdUsuario());
                 docente.setUsuario(usuarioNew);
-            }
-            if (gradoNew != null) {
-                gradoNew = em.getReference(gradoNew.getClass(), gradoNew.getIdGrado());
-                docente.setGrado(gradoNew);
             }
             docente = em.merge(docente);
             if (usuarioOld != null && !usuarioOld.equals(usuarioNew)) {
@@ -109,19 +88,6 @@ public class DocenteJpaController implements Serializable {
                 }
                 usuarioNew.setDocente(docente);
                 usuarioNew = em.merge(usuarioNew);
-            }
-            if (gradoOld != null && !gradoOld.equals(gradoNew)) {
-                gradoOld.setDocente(null);
-                gradoOld = em.merge(gradoOld);
-            }
-            if (gradoNew != null && !gradoNew.equals(gradoOld)) {
-                Docente oldDocenteOfGrado = gradoNew.getDocente();
-                if (oldDocenteOfGrado != null) {
-                    oldDocenteOfGrado.setGrado(null);
-                    oldDocenteOfGrado = em.merge(oldDocenteOfGrado);
-                }
-                gradoNew.setDocente(docente);
-                gradoNew = em.merge(gradoNew);
             }
             em.getTransaction().commit();
         } catch (Exception ex) {
@@ -156,11 +122,6 @@ public class DocenteJpaController implements Serializable {
             if (usuario != null) {
                 usuario.setDocente(null);
                 usuario = em.merge(usuario);
-            }
-            Grado grado = docente.getGrado();
-            if (grado != null) {
-                grado.setDocente(null);
-                grado = em.merge(grado);
             }
             em.remove(docente);
             em.getTransaction().commit();

@@ -1,0 +1,18 @@
+.card.mb-auto {
+    width: 100%;
+    margin: 0; /* Elimina márgenes */
+}
+
+.card.shadow.mb-4 {
+    width: 100%; /* Asegura que el contenedor ocupe todo el ancho */
+}
+
+.table-responsive {
+    width: 100%;
+    padding: 0; /* Quita padding adicional */
+    margin: 0; /* Quita margen adicional */
+}
+
+.table {
+    width: 100%;
+}

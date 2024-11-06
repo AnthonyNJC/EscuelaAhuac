@@ -6,7 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.OneToOne;
 
 @Entity
-public class Apoderado extends Persona implements Serializable{
+public class Apoderado extends Persona implements Serializable {
     
     private String parentesco;
     private String telefono;

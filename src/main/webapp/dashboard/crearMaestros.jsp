@@ -1,31 +1,16 @@
-<!--<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>Static Navigation - SB Admin</title>
-        <link href="cssDashboard/styles.css" rel="stylesheet" />
-        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-    </head>-->
+
 <%@include file="componentesDashboard/header.jsp" %>
 
 <%@include file="componentesDashboard/top.jsp" %>
 
 <%@include file="componentesDashboard/barraNavegacion.jsp" %>
 
-<div id="layoutSidenav_content" style="background-image: url(assetsDashboard/img/2.jpeg); background-repeat: no-repeat; background-size: cover; width: 100%;" class="col-lg-auto">
-    <div id="layoutSidenav_content" style="width: 100%">
+<div id="layoutSidenav_content" style="background-image: url(assetsDashboard/img/2.jpeg); background-repeat: no-repeat; background-size: cover" class="col-lg-auto">
+    <div id="layoutSidenav_content">
         <main >
             <div class="container"  >
-                <div style="padding: 20px 0 0 30px">
-                    <h1 style="color: #000000; -webkit-text-stroke: 1px #FFFFFF; font-weight: bold">Registro de Maestros</h1>
-                    <p style="font-size:20px; color: #FFFFFF; -webkit-text-stroke: .8px #000000; font-weight: bold">Este apartado es para registrar maestros con sus respectivas cuentas de usuario.</p> 
-                </div>
                 <div class="row justify-content-between">
-                    <div class="col-lg-10">
+                    <div class="col-lg-10 container-fluid px-4">
                         <div class="card shadow-lg border-0 rounded-lg mt-5" style="background: transparent; backdrop-filter: blur(20px); border-radius: 10px; padding: 30px 40px; box-shadow: 0 0 10px rgba(0, 0, 0, .2);  border: 2px solid rgba(255, 255, 255, .2);">
                             <div class="card-header" style="background: #1c1e21"><h3 class="text-center text-white font-weight-light my-4">Datos del Maestros</h3></div>
                             <div class="card-body">
@@ -72,20 +57,25 @@
                                             </div>
                                         </div>
                                     </div>
-                                     <div class="card card-header col-lg-10" style="background: #1c1e21">
-                                         <h3 class="text-center text-white font-weight-light my-4">Registro de Usuario</h3>
-                                     </div>
+                                    <div class="card card-header col-lg-10" style="background: #1c1e21">
+                                        <h3 class="text-center text-white font-weight-light my-4">Registro de Usuario</h3>
+                                    </div>
                                     <hr>
                                     <div class="row mb-3">
                                         <div class="col-md-6">
                                             <div class="form-floating mb-3 mb-md-0">
-                                                <input class="form-control" id="inputEmail" type="email" placeholder="name@example.com" />
-                                                <label for="inputEmail">Direccion de Correo</label>
+                                                <select class="form-control" id="inputRol" aria-label="Rol">
+                                                    <option value="" disabled selected>Seleccione el Rol que tendra el usuario</option>
+                                                    <option value="Administrador">Administrador</option>
+                                                    <option value="Administrativo">No-Administrador</option>
+                                                </select>
+                                                <label for="inputRol">Rol</label>
                                             </div>
+
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-floating mb-3 mb-md-0">
-                                                <input class="form-control" id="inputUsuario" type="password" placeholder="cree su usuario" />
+                                                <input class="form-control" id="inputUsuario" type="text" placeholder="cree su usuario" />
                                                 <label for="inputUsuario">Usuario</label>
                                             </div>
                                         </div>
@@ -115,25 +105,7 @@
             </div>
         </main>
     </div>
-    <div id="layoutAuthentication_footer">
-        <footer class="py-4 bg-light mt-auto">
-            <div class="container-fluid px-4">
-                <div class="d-flex align-items-center justify-content-between small">
-                    <div class="text-muted">Copyright &copy; Your Website 2023</div>
-                    <div>
-                        <a href="#">Privacy Policy</a>
-                        &middot;
-                        <a href="#">Terms &amp; Conditions</a>
-                    </div>
-                </div>
-            </div>
-        </footer>
-    </div>
-</div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-<script src="js/scripts.js"></script> 
 
-<link rel="stylesheet" href="cssDashboard/estiloFondo.css}"/>
 
-<%@include file="componentesDashboard/footer.jsp" %>
+    <%@include file="componentesDashboard/footer.jsp" %>
 

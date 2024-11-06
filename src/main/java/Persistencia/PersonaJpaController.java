@@ -30,7 +30,6 @@ public class PersonaJpaController implements Serializable {
     public EntityManager getEntityManager() {
         return emf.createEntityManager();
     }
-    
     public PersonaJpaController() {
         emf=Persistence.createEntityManagerFactory("Proyecto_EscuelaAhuac_PU");
     }

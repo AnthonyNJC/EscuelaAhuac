@@ -18,15 +18,3 @@
 
 <!--llamando a la seccion de footer -->
 <%@include file="componentes/footer.jsp" %>
-
-
-
-
-
-
-
-
-
-
-
-

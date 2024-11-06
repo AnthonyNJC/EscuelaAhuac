@@ -40,24 +40,24 @@
                         </a>
                         <div class="collapse" id="collapseEstudianteLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                             <nav class="sb-sidenav-menu-nested nav">
-                                <a class="nav-link" href="layout-static.jsp">Mostrar Estudiantes</a>
-                                <a class="nav-link" href="layout-sidenav-light.jsp">Matricula</a>
+                                <a class="nav-link" href="mostrarEstudiantes.jsp">Mostrar Estudiantes</a>
+                                <a class="nav-link" href="matricula.jsp">Matricula</a>
                             </nav>
                         </div>
                         <div class="sb-sidenav-menu-heading">Inventario</div>
-                        <a class="nav-link" href="charts.jsp">
+                        <a class="nav-link" href="crearProducto.jsp">
                             <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
-                            Crear Productos
+                            Registrar Producto
                         </a>
-                        <a class="nav-link" href="tables.jsp">
+                        <a class="nav-link" href="mostrarInventario.jsp">
                             <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                             Mostrar Productos
                         </a>
                     </div>
                 </div>
                 <div class="sb-sidenav-footer">
-                    <div class="small">Logged in as:</div>
-                    Start Bootstrap
+                    <div class="small">Sesion de usuario como:</div>
+                    Carlos
                 </div>
             </nav>
         </div>
