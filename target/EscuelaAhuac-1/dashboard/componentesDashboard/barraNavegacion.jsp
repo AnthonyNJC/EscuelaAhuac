@@ -17,7 +17,7 @@
                         </a>
                         <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                             <nav class="sb-sidenav-menu-nested nav">
-                                <a class="nav-link" href="mostrarUsuarios.jsp">Mostrar Usuarios</a>
+                                <a class="nav-link" href="../SVUsuarios">Mostrar Usuarios</a>
                             </nav>
                         </div>
                         
@@ -28,12 +28,12 @@
                         </a>
                         <div class="collapse" id="collapseMaestroLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                             <nav class="sb-sidenav-menu-nested nav">
-                                <a class="nav-link" href="mostrarMaestros.jsp">Mostrar Maestros</a>
+                                <a class="nav-link" href="../SVDocente">Mostrar Maestros</a>
                                 <a class="nav-link" href="crearMaestros.jsp">Crear Maestros</a>
                             </nav>
                         </div>
                         
-                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseEstudianteLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseEstudianteLayouts" aria-expanded="false" aria-controls="collapseLayouts" disabled>
                             <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
                             Estudiantes
                             <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
@@ -49,7 +49,7 @@
                             <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                             Registrar Producto
                         </a>
-                        <a class="nav-link" href="mostrarInventario.jsp">
+                        <a class="nav-link" href="../SVInventario">
                             <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                             Mostrar Productos
                         </a>

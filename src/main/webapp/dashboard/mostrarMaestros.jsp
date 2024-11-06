@@ -1,3 +1,7 @@
+<%@page import="java.util.Date"%>
+<%@page import="java.text.SimpleDateFormat"%>
+<%@page import="Logica.Docente"%>
+<%@page import="java.util.List"%>
 <%@include file="componentesDashboard/header.jsp" %>
 
 <%@include file="componentesDashboard/top.jsp" %>
@@ -24,85 +28,63 @@
                             <thead>
                                 <tr>
                                     <th>Id_Administrativos</th>
-                                    <th>Nombre del Administrativo</th>
-                                    <th>Nombre de Usuario</th>
+                                    <th>Nombre Completo</th>
+                                    <th>DNI</th>
+                                    <th>Telefono</th>
+                                    <th>Fecha de Nacimiento</th>
+                                    <th>Usuario</th>
                                     <th style="width: 210px">Acción</th>
                                 </tr>
                             </thead>
                             <tfoot>
                                 <tr>
                                     <th>Id_Administrativos</th>
-                                    <th>Nombre del Administrativo</th>
-                                    <th>Nombre de Usuario</th>
+                                    <th>Nombre Completo</th>
+                                    <th>DNI</th>
+                                    <th>Telefono</th>
+                                    <th>Fecha de Nacimiento</th>
+                                    <th>Usuario</th>
                                     <th style="width: 210px">Acción</th>
                                 </tr>
                             </tfoot>
-                            <%--                                            <%
-                                                                            List<Usuario> listaUsuarios = (List) request.getSession().getAttribute("listaUsuarios");
-                                                                        %> 
-                            --%>
+                                    <%
+                                        List<Docente> listaDocentes = (List) request.getSession().getAttribute("listaDocentes");
+                                    %> 
+                            
                             <tbody>
-                                <%--                                                 <%
-                                                                                    for (Usuario usu : listaUsuarios) {
-                                                                                %> 
-                                                                                <tr>
-                                                                                    <td><%=usu.getIdUsuario()%></td>
-                                                                                    <td><%=usu.getNombreUsuario()%></td>
-                                                                                    <td><%=usu.getRol()%></td>
-                                                                                    <td style="display: flex; width: 230px;">
-                                                                                        <form name="eliminar" action="SVEliminarUsuarios" method="POST"> <!-- esto es para mandar el codigo al servlet -->
-                                                                                            <button type="submit" class="btn btn-primary btn-user btn-block" style="background-color:red; margin-right: 5px;">
-                                                                                                <i class="fas fa-trash-alt"></i> Eliminar
-                                                                                            </button>
-                                                                                            <input type="hidden" name="id" value="<%= usu.getIdUsuario()%>"> <!-- esto es para mandar el codigo al servlet -->
-                                                                                        </form>
-                                                                                        <form name="editar" action="SVEditarUsuarios" method="GET"> <!-- esto es para mandar el codigo al servlet -->
-                                                                                            <button type="submit" class="btn btn-primary btn-user btn-block" style="margin-left: 5px;">
-                                                                                                <i class="fas fa-pencil-alt"></i> Editar
-                                                                                            </button>
-                                                                                            <input type="hidden" name="id" value="<%= usu.getIdUsuario()%>"> <!-- esto es para mandar el codigo al servlet -->
-                                                                                        </form>
-                                                                                    </td>
-                                                                                </tr>
-                                                                                <%
-                                                                                    }
-                                                                                %> --%>
-
-
-                                <tr>
-                                    <td>01</td>
-                                    <td>Buti Montes Junior</td>
-                                    <td>Programador</td>
-                                    <td style="display: flex; width: 230px;">
-                                        <form name="eliminar" action="SVEliminarUsuarios" method="POST"> <!-- esto es para mandar el codigo al servlet -->
-                                            <button type="submit" class="btn btn-primary btn-user btn-block" style="background-color:red; margin-right: 5px;">
-                                                <i class="fas fa-trash-alt"></i> Eliminar
-                                            </button>
-                                        </form>
-                                        <form name="editar" action="SVEditarUsuarios" method="GET"> <!-- esto es para mandar el codigo al servlet -->
-                                            <button type="submit" class="btn btn-primary btn-user btn-block" style="margin-left: 5px;">
-                                                <i class="fas fa-pencil-alt"></i> Editar
-                                            </button>
-                                        </form>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>02</td>
-                                    <td>Snoop Dog Lara</td>
-                                    <td>Iervero</td>
-                                    <td style="display: flex; width: 230px;">
-                                        <form name="eliminar" action="SVEliminarUsuarios" method="POST"> <!-- esto es para mandar el codigo al servlet -->
-                                            <button type="submit" class="btn btn-primary btn-user btn-block" style="background-color:red; margin-right: 5px;">
-                                                <i class="fas fa-trash-alt"></i> Eliminar
-                                            </button>
-                                        </form>
-                                        <form name="editar" action="SVEditarUsuarios" method="GET"> <!-- esto es para mandar el codigo al servlet -->
-                                            <button type="submit" class="btn btn-primary btn-user btn-block" style="margin-left: 5px;">
-                                                <i class="fas fa-pencil-alt"></i> Editar
-                                            </button>
-                                        </form>
-                                    </td>
-                                </tr>
+                                     <%
+                                        for (Docente doc : listaDocentes) {
+                                        SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy");
+                                    %> 
+                                    <tr>
+                                        <td><%=doc.getId()%></td>
+                                        <td><%=doc.getNombre() +" "+ doc.getApellido()%></td>
+                                        <td><%=doc.getDni()%></td>
+                                        <td><%=doc.getTelefono()%></td>
+                                        <%
+                                        Date fecha =doc.getFechaNacimiento();
+                                        String fechaString = formatter.format(fecha);
+                                        %> 
+                                        <td><%=fechaString%></td>
+                                        <td><%=doc.getUsuario().getNombreUsuario()%></td>
+                                        <td style="display: flex; width: 230px;">
+                                            <form name="eliminar" action="SVEliminarUsuarios" method="POST"> <!-- esto es para mandar el codigo al servlet -->
+                                                <button type="submit" class="btn btn-primary btn-user btn-block" style="background-color:red; margin-right: 5px;">
+                                                    <i class="fas fa-trash-alt"></i> Eliminar
+                                                </button>
+                                                <input type="hidden" name="id" value="<%= doc.getId()%>"> <!-- esto es para mandar el codigo al servlet -->
+                                            </form>
+                                            <form name="editar" action="SVEditarUsuarios" method="GET"> <!-- esto es para mandar el codigo al servlet -->
+                                                <button type="submit" class="btn btn-primary btn-user btn-block" style="margin-left: 5px;">
+                                                    <i class="fas fa-pencil-alt"></i> Editar
+                                                </button>
+                                                <input type="hidden" name="id" value="<%= doc.getId()%>"> <!-- esto es para mandar el codigo al servlet -->
+                                            </form>
+                                        </td>
+                                    </tr>
+                                    <%
+                                        }
+                                    %> 
 
                             </tbody>
                         </table>
