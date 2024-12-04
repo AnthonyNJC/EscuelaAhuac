@@ -14,47 +14,54 @@
                         <div class="card shadow-lg border-0 rounded-lg mt-5" style="background: transparent; backdrop-filter: blur(20px); border-radius: 10px; padding: 30px 40px; box-shadow: 0 0 10px rgba(0, 0, 0, .2);  border: 2px solid rgba(255, 255, 255, .2);">
                             <div class="card-header" style="background: #1c1e21"><h3 class="text-center text-white font-weight-light my-4">Datos del Estudiante</h3></div>
                             <div class="card-body">
-                                <form>
+                                <form action="../SVEstudiante" method="POST">
                                     <div class="row mb-3">
                                         <div class="col-md-6" >
                                             <div class="form-floating mb-3 mb-md-0">
-                                                <input class="form-control" id="inputNombreEstudiante" type="text" placeholder="Ingrese sus nombres" />
-                                                <label for="inputNombre">Nombres del estudiante</label>
+                                                <input class="form-control" name="inputNombreEstudiante" type="text" placeholder="Ingrese sus nombres" />
+                                                <label for="inputNombreEstudiante">Nombres del estudiante</label>
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-floating">
-                                                <input class="form-control" id="inputApellidoEstudiante" type="text" placeholder="Ingrese sus apellidos" />
-                                                <label for="inputApellido">Apellidos del estudiante</label>
+                                                <input class="form-control" name="inputApellidoEstudiante" type="text" placeholder="Ingrese sus apellidos" />
+                                                <label for="inputApellidoEstudiante">Apellidos del estudiante</label>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="row mb-3">
                                         <div class="col-md-6">
                                             <div class="form-floating mb-3 mb-md-0">
-                                                <input class="form-control" id="inputDNIEstudiante" type="text" placeholder="Ingrese su DNI" />
-                                                <label for="inputDNI">DNI del estudiante</label>
+                                                <input class="form-control" name="inputDNIEstudiante" type="text" placeholder="Ingrese su DNI" />
+                                                <label for="inputDNIEstudiante">DNI del estudiante</label>
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-floating">
-                                                <input class="form-control" id="inputNacimientoEstudiante" type="date" placeholder="Ingrese su fecha de nacimiento" />
-                                                <label for="inputNacimiento">fecha de Nacimiento del estudiante</label>
+                                                <input class="form-control" name="inputNacimientoEstudiante" type="date" placeholder="Ingrese su fecha de nacimiento" />
+                                                <label for="inputNacimientoEstudiante">fecha de Nacimiento del estudiante</label>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="row mb-3">
                                         <div class="col-md-6">
                                             <div class="form-floating mb-3 mb-md-0">
-                                                <select class="form-control" id="inputGrado" aria-label="Grado">
+                                                <select class="form-control" name="inputGrado" aria-label="Grado">
                                                     <option value="" disabled selected>Seleccione su Grado</option>
-                                                    <option value="Inicial">Inicial</option>
-                                                    <option value="1° grado">1° grado</option>
-                                                    <option value="2° grado">2° grado</option>
-                                                    <option value="3° grado">3° grado</option>
-                                                    <option value="4° grado">4° grado</option>
-                                                    <option value="5° grado">5° grado</option>
-                                                    <option value="6° grado">6° grado</option>
+                                                    <option value="3 años">3 años</option>
+                                                    <option value="4 años 'A'">4 años 'A'</option>
+                                                    <option value="4 años 'B'">4 años 'B'</option>
+                                                    <option value="5 años 'A'">5 años 'A'</option>
+                                                    <option value="5 años 'B'">5 años 'B'</option>
+                                                    <option value="1° 'U'">1° 'U'</option>
+                                                    <option value="2° 'A'">2° 'A'</option>
+                                                    <option value="2° 'B'">2° 'B'</option>
+                                                    <option value="3° 'U'">3° 'U'</option>
+                                                    <option value="4° 'A'">4° 'A'</option>
+                                                    <option value="4° 'B'">4° 'B'</option>
+                                                    <option value="5° 'U'">5° 'U'</option>
+                                                    <option value="6° 'A'">6° 'A'</option>
+                                                    <option value="6° 'B'">6° 'B'</option>
                                                     <!-- Agrega más opciones según sea necesario -->
                                                 </select>
                                                 <label for="inputGrado">Grado</label>
@@ -75,47 +82,47 @@
                                     <div class="row mb-3">
                                         <div class="col-md-6" >
                                             <div class="form-floating mb-3 mb-md-0">
-                                                <input class="form-control" id="inputNombreApoderado" type="text" placeholder="Ingrese sus nombres" />
-                                                <label for="inputNombre">Nombres del apoderado</label>
+                                                <input class="form-control" name="inputNombreApoderado" type="text" placeholder="Ingrese sus nombres" />
+                                                <label for="inputNombreApoderado">Nombres del apoderado</label>
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-floating">
-                                                <input class="form-control" id="inputApellidoApoderado" type="text" placeholder="Ingrese sus apellidos" />
-                                                <label for="inputApellido">Apellidosdel apoderado</label>
+                                                <input class="form-control" name="inputApellidoApoderado" type="text" placeholder="Ingrese sus apellidos" />
+                                                <label for="inputApellidoApoderado">Apellidosdel apoderado</label>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="row mb-3">
                                         <div class="col-md-6">
                                             <div class="form-floating mb-3 mb-md-0">
-                                                <input class="form-control" id="inputDNIApoderado" type="text" placeholder="Ingrese su DNI" />
-                                                <label for="inputDNI">DNI del apoderado</label>
+                                                <input class="form-control" name="inputDNIApoderado" type="text" placeholder="Ingrese su DNI" />
+                                                <label for="inputDNIApoderado">DNI del apoderado</label>
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-floating">
-                                                <input class="form-control" id="inputNacimientoApoderado" type="date" placeholder="Ingrese su fecha de nacimiento" />
-                                                <label for="inputNacimiento">fecha de Nacimiento del apoderado</label>
+                                                <input class="form-control" name="inputNacimientoApoderado" type="date" placeholder="Ingrese su fecha de nacimiento" />
+                                                <label for="inputNacimientoApoderado">fecha de Nacimiento del apoderado</label>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="row mb-3">
                                         <div class="col-md-6">
                                             <div class="form-floating mb-3 mb-md-0">
-                                                <input class="form-control" id="inputParentesco" type="text" placeholder="Ingrese su parentesco" />
-                                                <label for="inputGrado">Parentesco con el estudiante</label>
+                                                <input class="form-control" name="inputParentesco" type="text" placeholder="Ingrese su parentesco" />
+                                                <label for="inputParentesco">Parentesco con el estudiante</label>
                                             </div>
                                         </div>  
                                         <div class="col-md-6">
                                             <div class="form-floating mb-3 mb-md-0">
-                                                <input class="form-control" id="inputTelefono" type="tel" placeholder="Ingrese su Telefono" pattern="[0-9]{9}" title="Debe ingresar un número de 9 dígitos" />
+                                                <input class="form-control" name="inputTelefono" type="tel" placeholder="Ingrese su Telefono" pattern="[0-9]{9}" title="Debe ingresar un número de 9 dígitos" />
                                                 <label for="inputTelefono">telefono/celular</label>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="mt-4 mb-0">
-                                        <div class="d-grid"><a class="btn btn-primary btn-block" style="background: #1c1e21" href="login.html">Registrar Matricula</a></div>
+                                        <div class="d-grid"><button class="btn btn-primary btn-block" style="background: #1c1e21" type="submit">Registrar Matricula</button></div>
                                     </div>
                                 </form>
                             </div>

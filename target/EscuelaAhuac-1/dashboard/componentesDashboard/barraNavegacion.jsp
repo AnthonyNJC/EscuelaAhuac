@@ -6,7 +6,7 @@
                         <div class="sb-sidenav-menu-heading">Core</div>
                         <a class="nav-link" href="index.jsp">
                             <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                            Administración
+                            Inicio
                         </a>
                         
                         <div class="sb-sidenav-menu-heading">Vista</div>
@@ -40,7 +40,7 @@
                         </a>
                         <div class="collapse" id="collapseEstudianteLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                             <nav class="sb-sidenav-menu-nested nav">
-                                <a class="nav-link" href="mostrarEstudiantes.jsp">Mostrar Estudiantes</a>
+                                <a class="nav-link" href="../SVEstudiante">Mostrar Estudiantes</a>
                                 <a class="nav-link" href="matricula.jsp">Matricula</a>
                             </nav>
                         </div>

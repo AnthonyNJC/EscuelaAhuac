@@ -15,5 +15,9 @@ D:\NetBeans-17\Neatbeans-Projects\EscuelaAhuac\src\main\java\Persistencia\except
 D:\NetBeans-17\Neatbeans-Projects\EscuelaAhuac\src\main\java\Persistencia\InventarioJpaController.java
 D:\NetBeans-17\Neatbeans-Projects\EscuelaAhuac\src\main\java\Persistencia\PersonaJpaController.java
 D:\NetBeans-17\Neatbeans-Projects\EscuelaAhuac\src\main\java\Persistencia\UsuarioJpaController.java
+D:\NetBeans-17\Neatbeans-Projects\EscuelaAhuac\src\main\java\Servlets\SVDocente.java
+D:\NetBeans-17\Neatbeans-Projects\EscuelaAhuac\src\main\java\Servlets\SVEliminarMaestros.java
+D:\NetBeans-17\Neatbeans-Projects\EscuelaAhuac\src\main\java\Servlets\SVEliminarProducto.java
 D:\NetBeans-17\Neatbeans-Projects\EscuelaAhuac\src\main\java\Servlets\SVEstudiante.java
+D:\NetBeans-17\Neatbeans-Projects\EscuelaAhuac\src\main\java\Servlets\SVInventario.java
 D:\NetBeans-17\Neatbeans-Projects\EscuelaAhuac\src\main\java\Servlets\SVUsuarios.java

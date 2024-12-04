@@ -19,7 +19,7 @@ import javax.persistence.Persistence;
 
 /**
  *
- * @author VR_LISA
+ * @author Yo
  */
 public class DocenteJpaController implements Serializable {
 
@@ -31,7 +31,7 @@ public class DocenteJpaController implements Serializable {
     public EntityManager getEntityManager() {
         return emf.createEntityManager();
     }
-    public DocenteJpaController() {
+    public DocenteJpaController(){
         emf=Persistence.createEntityManagerFactory("Proyecto_EscuelaAhuac_PU");
     }
 

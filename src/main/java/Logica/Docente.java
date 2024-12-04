@@ -2,15 +2,16 @@ package Logica;
 
 import java.io.Serializable;
 import java.util.Date;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.OneToOne;
 
 @Entity
-public class Docente extends Persona implements Serializable {
+public class Docente extends Persona {
     
     
     private String telefono;
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
     private Usuario usuario;
 
     public Docente(String telefono, Usuario usuario, int id, String dni, String nombre, String apellido, Date fechaNacimiento) {

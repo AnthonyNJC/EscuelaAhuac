@@ -14,7 +14,7 @@
                         <div class="card shadow-lg border-0 rounded-lg mt-5" style="background: transparent; backdrop-filter: blur(20px); border-radius: 10px; padding: 30px 40px; box-shadow: 0 0 10px rgba(0, 0, 0, .2);  border: 2px solid rgba(255, 255, 255, .2);">
                             <div class="card-header" style="background: #1c1e21"><h3 class="text-center text-white font-weight-light my-4">Datos del Maestros</h3></div>
                             <div class="card-body">
-                                <form action="../SVUsuarios" method="POST">
+                                <form action="../SVDocente" method="POST">
                                     <div class="row mb-3">
                                         <div class="col-md-6" >
                                             <div class="form-floating mb-3 mb-md-0">

@@ -2,15 +2,16 @@ package Logica;
 
 import java.io.Serializable;
 import java.util.Date;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.OneToOne;
 
 @Entity
-public class Apoderado extends Persona implements Serializable {
+public class Apoderado extends Persona {
     
     private String parentesco;
     private String telefono;
-    @OneToOne
+    @OneToOne(mappedBy = "apoderado", cascade = CascadeType.ALL, orphanRemoval = true)
     private Estudiante estudiante;
 
     public Apoderado() {

@@ -1,6 +1,7 @@
 package Logica;
 
 import java.io.Serializable;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -16,7 +17,7 @@ public class Usuario implements Serializable {
     private String nombreUsuario;
     private String contrasenia;
     private String rol;
-    @OneToOne
+    @OneToOne(mappedBy = "usuario", cascade = CascadeType.ALL, orphanRemoval = true)
     private Docente docente;
 
     public Usuario() {

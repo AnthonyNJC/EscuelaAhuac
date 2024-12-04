@@ -54,12 +54,12 @@
                                     <td><%=usu.getRol()%></td>
                                     <td><%=usu.getDocente().getNombre()%></td>
                                     <td style="display: flex; width: 230px;">
-                                        <form name="eliminar" action="SVEliminarUsuarios" method="POST"> <!-- esto es para mandar el codigo al servlet -->
+                                        <%-- <form name="eliminar" action="SVEliminarUsuarios" method="POST"> <!-- esto es para mandar el codigo al servlet -->
                                             <button type="submit" class="btn btn-primary btn-user btn-block" style="background-color:red; margin-right: 5px;">
                                                 <i class="fas fa-trash-alt"></i> Eliminar
                                             </button>
                                             <input type="hidden" name="id" value="<%= usu.getIdUsuario()%>"> <!-- esto es para mandar el codigo al servlet -->
-                                        </form>
+                                        </form> --%>
                                         <form name="editar" action="SVEditarUsuarios" method="GET"> <!-- esto es para mandar el codigo al servlet -->
                                             <button type="submit" class="btn btn-primary btn-user btn-block" style="margin-left: 5px;">
                                                 <i class="fas fa-pencil-alt"></i> Editar

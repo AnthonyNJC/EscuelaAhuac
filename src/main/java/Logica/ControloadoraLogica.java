@@ -30,11 +30,45 @@ public class ControloadoraLogica {
         return docente1;
     }
     
+    public Estudiante crearEstudiante(String nombre, String apellido, String dni, Date fecha, String grado){
+        Estudiante alumno = new Estudiante();
+        alumno.setNombre(nombre);
+        alumno.setApellido(apellido);
+        alumno.setDni(dni);
+        alumno.setFechaNacimiento(fecha);
+        alumno.setGrado(grado);
+        
+        Estudiante alumno1 = controlPersistencia.crearEstudiante(alumno);
+        return alumno1;
+    }
     
-    public void crearProducto(String nombreProducto, int cantidad) {
+    public void crearApoderado(String nombreApoderado, String apellidoApoderado, String DNIApoderado, Date fechaNacimientoApoderado, String parentesco, String telefono, Estudiante estudiante1) {
+        Apoderado apoderado = new Apoderado();
+        apoderado.setNombre(nombreApoderado);
+        apoderado.setApellido(apellidoApoderado);
+        apoderado.setDni(DNIApoderado);
+        apoderado.setFechaNacimiento(fechaNacimientoApoderado);
+        apoderado.setParentesco(parentesco);
+        apoderado.setTelefono(telefono);
+        apoderado.setEstudiante(estudiante1);
+        
+        controlPersistencia.crearApoderado(apoderado);
+    }
+
+    
+    
+    public void crearProducto(String nombreProducto, long codigo, String marca, String modelo, Date fecha, String tipo, String centroCostos, String ubicacion, String estado) {
         Inventario producto = new Inventario();
         producto.setNombreBien(nombreProducto);
-        producto.setCantidad(cantidad);
+        producto.setCodigo(codigo);
+        producto.setMarca(marca);
+        producto.setModelo(modelo);
+        producto.setFechaAlta(fecha);
+        producto.setTipoIngreso(tipo);
+        producto.setCentroCosto(centroCostos);
+        producto.setUbicacionFisica(ubicacion);
+        producto.setEstado(estado);
+        
         
         controlPersistencia.crearProducto(producto);
     }
@@ -58,5 +92,28 @@ public class ControloadoraLogica {
        return controlPersistencia.mostrarProductos();
     }
 
+    public List<Estudiante> mostrarEstudiantes() {
+        return controlPersistencia.mostrarEstudiantes();
+    }
+    
+    
+    //ELIMINAR
+
+    public void eliminarProducto(int id) {
+        
+        controlPersistencia.eliminarProducto(id);
+    }
+
+    public void eliminarMaestro(int id) {
+        controlPersistencia.eliminarMaestro(id);
+    }
+
+    public void eliminarEstudiante(int id) {
+        controlPersistencia.eliminarEstudiante(id);
+    }
+
+    
+
+    
     
 }

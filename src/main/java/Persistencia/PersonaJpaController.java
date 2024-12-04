@@ -18,7 +18,7 @@ import javax.persistence.criteria.Root;
 
 /**
  *
- * @author VR_LISA
+ * @author Yo
  */
 public class PersonaJpaController implements Serializable {
 
@@ -30,7 +30,7 @@ public class PersonaJpaController implements Serializable {
     public EntityManager getEntityManager() {
         return emf.createEntityManager();
     }
-    public PersonaJpaController() {
+    public PersonaJpaController(){
         emf=Persistence.createEntityManagerFactory("Proyecto_EscuelaAhuac_PU");
     }
 

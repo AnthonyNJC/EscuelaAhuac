@@ -46,33 +46,7 @@ public class SVUsuarios extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        String nombre = request.getParameter("inputNombre");
-        String apellido = request.getParameter("inputApellido");
-        String DNI = request.getParameter("inputDNI");
-        String fechaNacimientoString = request.getParameter("inputNacimiento");
-
-        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
-        Date fechaNacimiento= null;
-
-        try {
-            // Convertir el String a java.util.Date
-            fechaNacimiento = formatter.parse(fechaNacimientoString);
-        } catch (Exception e) {
-            e.printStackTrace();
-            response.getWriter().println("Error al parsear la fecha");
-            return;
-        }
-
-        String telefono = request.getParameter("inputTelefono");
-        String rol = request.getParameter("inputRol");
-        String usuario = request.getParameter("inputUsuario");
-        String contrasenia = request.getParameter("inputPassword");
-
-        Docente docente1 =controlLogico.crearMaestro(nombre, apellido, DNI, fechaNacimiento, telefono);
         
-        controlLogico.crearUsuario(usuario, contrasenia, rol, docente1);
-        
-        response.sendRedirect("dashboard/index.jsp");
     }
 
     @Override

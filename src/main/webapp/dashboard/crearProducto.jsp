@@ -24,16 +24,77 @@
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-floating">
-                                                <input class="form-control" name="inputCantidad" type="number" placeholder="Ingrese la cantidad" />
-                                                <label for="inputCantidad">Cantidad (Solo digite Numeros)</label>
+                                                <input class="form-control" name="inputCodigo" type="number" placeholder="Ingrese el codigo patrimonial" />
+                                                <label for="inputCodigo">Codigo patrimonial</label>
                                             </div>
                                         </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <div class="col-md-6" >
+                                            <div class="form-floating mb-3 mb-md-0">
+                                                <input class="form-control" name="inputMarca" type="text" placeholder="Ingrese el nombre del objeto" />
+                                                <label for="inputMarca">Marca del objeto</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-floating">
+                                                <input class="form-control" name="inputModelo" type="text" placeholder="Ingrese el modelo" />
+                                                <label for="inputModelo">Modelo del objeto</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <div class="col-md-6" >
+                                            <div class="form-floating mb-3 mb-md-0">
+                                                <input class="form-control" name="inputFecha" type="date" placeholder="Ingrese la fecha de alta" min="1999-01-01" max="2050-12-31" />
+                                                <label for="inputFecha">Fecha de alta</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-floating">
+                                                <input class="form-control" name="inputTipo" type="text" placeholder="Ingrese el tipo de ingreso" />
+                                                <label for="inputTipo">Tipo de ingreso</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <div class="col-md-6">
+                                            <div class="form-floating mb-3 mb-md-0">
+                                                <select class="form-control" name="inputCentroCostos" aria-label="Centro de Costos">
+                                                    <option value="" disabled selected>Seleccione el Centro de costos</option>
+                                                    <option value="1653096 - 30064 - INICIAL">1653096 - 30064 - INICIAL</option>
+                                                    <option value="0375188 - 30064 - PRIMARIA">0375188 - 30064 - PRIMARIA</option>
+                                                    <!-- Agrega más opciones según sea necesario -->
+                                                </select>
+                                                <label for="inputCentroCostos">Centro de Costos</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-floating mb-3 mb-md-0">
+                                                <select class="form-control" name="inputUbicacion" aria-label="Ubicacion Fisica">
+                                                    <option value="" disabled selected>Seleccione la ubicacion fisica</option>
+                                                    <option value="INICIAL-30064">INICIAL-30064</option>
+                                                    <option value="PRIMARIA-30064">PRIMARIA-30064</option>
+                                                    <!-- Agrega más opciones según sea necesario -->
+                                                </select>
+                                                <label for="inputUbicacion">Ubicacion Fisica</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <div class="col-md-12" >
+                                            <div class="form-floating mb-3 mb-md-0">
+                                                <input class="form-control" name="inputEstado" type="text" placeholder="Ingrese el estado del objeto" />
+                                                <label for="inputEstado">Estado</label>
+                                            </div>
+                                        </div>
+                                        
                                     </div>
                                     
                                    
                                    
                                     <div class="mt-4 mb-0">
-                                        <div class="d-grid"><button class="btn btn-primary btn-block" style="background: #1c1e21" type="submit">Registrar Bien</button></div>
+                                        <div class="d-grid"><button class="btn btn-primary btn-block" style="background: #1c1e21" type="submit">Registrar Objeto</button></div>
                                     </div>
                                 </form>
                             </div>

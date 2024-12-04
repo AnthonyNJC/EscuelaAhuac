@@ -4,7 +4,9 @@ import Logica.ControloadoraLogica;
 import Logica.Inventario;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -43,10 +45,30 @@ public class SVInventario extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
-        String nombreProducto = request.getParameter("inputNombre");
-        int cantidad = Integer.parseInt(request.getParameter("inputCantidad"));
+        String nombre = request.getParameter("inputNombre");
+        long codigo = Long.parseLong(request.getParameter("inputCodigo"));
+        String marca = request.getParameter("inputMarca");
+        String modelo = request.getParameter("inputModelo");
+        String fechaString = request.getParameter("inputFecha");
+        String tipo = request.getParameter("inputTipo");
+        String centroCostos = request.getParameter("inputCentroCostos");
+        String ubicacion = request.getParameter("inputUbicacion");
+        String estado = request.getParameter("inputEstado");
         
-        controlLogico.crearProducto(nombreProducto, cantidad);
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+        Date fecha= null;
+
+        try {
+            // Convertir el String a java.util.Date
+            fecha = formatter.parse(fechaString);
+        } catch (Exception e) {
+            e.printStackTrace();
+            response.getWriter().println("Error al parsear la fecha");
+            return;
+        }
+        
+        
+        controlLogico.crearProducto(nombre, codigo, marca, modelo, fecha, tipo, centroCostos, ubicacion, estado);
         
         response.sendRedirect("dashboard/index.jsp");
         

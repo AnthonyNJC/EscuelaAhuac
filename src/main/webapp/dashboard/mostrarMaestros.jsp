@@ -68,7 +68,7 @@
                                         <td><%=fechaString%></td>
                                         <td><%=doc.getUsuario().getNombreUsuario()%></td>
                                         <td style="display: flex; width: 230px;">
-                                            <form name="eliminar" action="SVEliminarUsuarios" method="POST"> <!-- esto es para mandar el codigo al servlet -->
+                                            <form name="eliminar" action="../SVEliminarMaestros" method="POST"> <!-- esto es para mandar el codigo al servlet -->
                                                 <button type="submit" class="btn btn-primary btn-user btn-block" style="background-color:red; margin-right: 5px;">
                                                     <i class="fas fa-trash-alt"></i> Eliminar
                                                 </button>
