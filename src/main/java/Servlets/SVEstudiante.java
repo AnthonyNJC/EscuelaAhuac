@@ -51,7 +51,7 @@ public class SVEstudiante extends HttpServlet {
         String DNIEstudiante = request.getParameter("inputDNIEstudiante");
         String fechaNacimientoEstudianteString = request.getParameter("inputNacimientoEstudiante");
         String grado = request.getParameter("inputGrado");
-        
+
         String nombreApoderado = request.getParameter("inputNombreApoderado");
         String apellidoApoderado = request.getParameter("inputApellidoApoderado");
         String DNIApoderado = request.getParameter("inputDNIApoderado");

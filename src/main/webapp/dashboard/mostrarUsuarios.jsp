@@ -28,7 +28,6 @@
                                     <th>Nombre de Usuario</th>
                                     <th>Rol</th>
                                     <th>Propietario</th>
-                                    <th style="width: 210px">Acción</th>
                                 </tr>
                             </thead>
                             <tfoot>
@@ -37,7 +36,6 @@
                                     <th>Nombre de Usuario</th>
                                     <th>Rol</th>
                                     <th>Propietario</th>
-                                    <th style="width: 210px">Acción</th>
                                 </tr>
                             </tfoot>
                               <%
@@ -52,21 +50,7 @@
                                     <td><%=usu.getIdUsuario()%></td>
                                     <td><%=usu.getNombreUsuario()%></td>
                                     <td><%=usu.getRol()%></td>
-                                    <td><%=usu.getDocente().getNombre()%></td>
-                                    <td style="display: flex; width: 230px;">
-                                        <%-- <form name="eliminar" action="SVEliminarUsuarios" method="POST"> <!-- esto es para mandar el codigo al servlet -->
-                                            <button type="submit" class="btn btn-primary btn-user btn-block" style="background-color:red; margin-right: 5px;">
-                                                <i class="fas fa-trash-alt"></i> Eliminar
-                                            </button>
-                                            <input type="hidden" name="id" value="<%= usu.getIdUsuario()%>"> <!-- esto es para mandar el codigo al servlet -->
-                                        </form> --%>
-                                        <form name="editar" action="SVEditarUsuarios" method="GET"> <!-- esto es para mandar el codigo al servlet -->
-                                            <button type="submit" class="btn btn-primary btn-user btn-block" style="margin-left: 5px;">
-                                                <i class="fas fa-pencil-alt"></i> Editar
-                                            </button>
-                                            <input type="hidden" name="id" value="<%= usu.getIdUsuario()%>"> <!-- esto es para mandar el codigo al servlet -->
-                                        </form>
-                                    </td>
+                                    <td><%=usu.getDocente().getNombre() + " " + usu.getDocente().getApellido()  %></td>
                                 </tr>
                                 <%
                                     }

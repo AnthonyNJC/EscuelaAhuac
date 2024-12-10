@@ -62,6 +62,7 @@ public class SVDocente extends HttpServlet {
         } catch (Exception e) {
             e.printStackTrace();
             response.getWriter().println("Error al parsear la fecha");
+            System.out.println("Error al parsear la fecha");
             return;
         }
 

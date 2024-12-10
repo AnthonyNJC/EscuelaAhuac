@@ -32,7 +32,6 @@
                                     <th>DNI</th>
                                     <th>Telefono</th>
                                     <th>Fecha de Nacimiento</th>
-                                    <th>Usuario</th>
                                     <th style="width: 210px">Acción</th>
                                 </tr>
                             </thead>
@@ -43,7 +42,6 @@
                                     <th>DNI</th>
                                     <th>Telefono</th>
                                     <th>Fecha de Nacimiento</th>
-                                    <th>Usuario</th>
                                     <th style="width: 210px">Acción</th>
                                 </tr>
                             </tfoot>
@@ -66,7 +64,6 @@
                                         String fechaString = formatter.format(fecha);
                                         %> 
                                         <td><%=fechaString%></td>
-                                        <td><%=doc.getUsuario().getNombreUsuario()%></td>
                                         <td style="display: flex; width: 230px;">
                                             <form name="eliminar" action="../SVEliminarMaestros" method="POST"> <!-- esto es para mandar el codigo al servlet -->
                                                 <button type="submit" class="btn btn-primary btn-user btn-block" style="background-color:red; margin-right: 5px;">
@@ -74,7 +71,7 @@
                                                 </button>
                                                 <input type="hidden" name="id" value="<%= doc.getId()%>"> <!-- esto es para mandar el codigo al servlet -->
                                             </form>
-                                            <form name="editar" action="SVEditarUsuarios" method="GET"> <!-- esto es para mandar el codigo al servlet -->
+                                            <form name="editar" action="../SVEditarMaestro" method="GET"> <!-- esto es para mandar el codigo al servlet -->
                                                 <button type="submit" class="btn btn-primary btn-user btn-block" style="margin-left: 5px;">
                                                     <i class="fas fa-pencil-alt"></i> Editar
                                                 </button>

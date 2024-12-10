@@ -5,36 +5,6 @@ import Logica.Docente;
 import Logica.Estudiante;
 import Logica.Inventario;
 import Logica.Usuario;
-import Persistencia.ApoderadoJpaController;
-import Persistencia.ApoderadoJpaController;
-import Persistencia.ApoderadoJpaController;
-import Persistencia.ApoderadoJpaController;
-import Persistencia.ApoderadoJpaController;
-import Persistencia.DocenteJpaController;
-import Persistencia.DocenteJpaController;
-import Persistencia.DocenteJpaController;
-import Persistencia.DocenteJpaController;
-import Persistencia.DocenteJpaController;
-import Persistencia.EstudianteJpaController;
-import Persistencia.EstudianteJpaController;
-import Persistencia.EstudianteJpaController;
-import Persistencia.EstudianteJpaController;
-import Persistencia.EstudianteJpaController;
-import Persistencia.InventarioJpaController;
-import Persistencia.InventarioJpaController;
-import Persistencia.InventarioJpaController;
-import Persistencia.InventarioJpaController;
-import Persistencia.InventarioJpaController;
-import Persistencia.PersonaJpaController;
-import Persistencia.PersonaJpaController;
-import Persistencia.PersonaJpaController;
-import Persistencia.PersonaJpaController;
-import Persistencia.PersonaJpaController;
-import Persistencia.UsuarioJpaController;
-import Persistencia.UsuarioJpaController;
-import Persistencia.UsuarioJpaController;
-import Persistencia.UsuarioJpaController;
-import Persistencia.UsuarioJpaController;
 import Persistencia.exceptions.NonexistentEntityException;
 import java.util.List;
 import java.util.logging.Level;
@@ -101,6 +71,21 @@ public class ControladoraPersistencia {
         return estudianteJPA.findEstudianteEntities();
     }
     
+    //MOSTRAR POR ID
+    
+    public Estudiante mostrarEstudianteId(int id) {
+       return estudianteJPA.findEstudiante(id);
+    }
+     public Docente mostrarMaestroId(int id) {
+         return docenteJPA.findDocente(id);
+     }
+     public Inventario mostrarProductoId(int id) {
+         return inventarioJPA.findInventario(id);
+    }
+    
+    
+    
+    
     
     //ELIMINAR
 
@@ -127,6 +112,56 @@ public class ControladoraPersistencia {
             Logger.getLogger(ControladoraPersistencia.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
+    
+    
+    //EDITAR
+
+    public void editarEstudiante(Estudiante estudiante1) {
+        try {
+            estudianteJPA.edit(estudiante1);
+        } catch (Exception ex) {
+            Logger.getLogger(ControladoraPersistencia.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    public void editarApoderado(Apoderado apo) {
+        try {
+            apoderadoJPA.edit(apo);
+        } catch (Exception ex) {
+            Logger.getLogger(ControladoraPersistencia.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    public void editarUsuario(Usuario user) {
+        try {
+            usuarioJPA.edit(user);
+        } catch (Exception ex) {
+            Logger.getLogger(ControladoraPersistencia.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    public void editarMaestro(Docente maestro1) {
+        try {
+            docenteJPA.edit(maestro1);
+        } catch (Exception ex) {
+            Logger.getLogger(ControladoraPersistencia.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    public void editarProducto(Inventario producto) {
+        try {
+            inventarioJPA.edit(producto);
+        } catch (Exception ex) {
+            Logger.getLogger(ControladoraPersistencia.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    
+
+   
+
+
+    
 
    
 

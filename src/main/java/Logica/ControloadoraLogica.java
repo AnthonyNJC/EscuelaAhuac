@@ -96,6 +96,20 @@ public class ControloadoraLogica {
         return controlPersistencia.mostrarEstudiantes();
     }
     
+    //MOSTRAR POR ID
+    public Estudiante mostrarEstudianteId(int id) {
+        return controlPersistencia.mostrarEstudianteId(id);
+    }
+    public Docente mostrarMaestroId(int id) {
+        return controlPersistencia.mostrarMaestroId(id);
+    }
+    public Inventario mostrarProductoId(int id) {
+        return controlPersistencia.mostrarProductoId(id);
+    }
+    
+    
+    
+    
     
     //ELIMINAR
 
@@ -111,6 +125,39 @@ public class ControloadoraLogica {
     public void eliminarEstudiante(int id) {
         controlPersistencia.eliminarEstudiante(id);
     }
+    
+    
+    //EDITAR
+
+    public void editarEstudiante(Estudiante estudiante1) {
+        controlPersistencia.editarEstudiante(estudiante1);
+    }
+
+    public void editarApoderado(Apoderado apo) {
+        controlPersistencia.editarApoderado(apo);
+    }
+
+    public void editarUsuario(Usuario user) {
+        controlPersistencia.editarUsuario(user);
+    }
+
+    public void editarMestro(Docente maestro1) {
+        controlPersistencia.editarMaestro(maestro1);
+    }
+
+    public void editarProducto(Inventario producto) {
+        controlPersistencia.editarProducto(producto);
+    }
+
+    
+
+    
+
+ 
+
+   
+
+    
 
     
 

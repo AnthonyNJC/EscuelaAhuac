@@ -12,6 +12,19 @@
                 </footer>
             </div>
         </div>
+        
+        <script>
+        document.getElementById("formulario").addEventListener("submit", function (event) {
+            const password = document.getElementById("inputPassword").value;
+            const confirmPassword = document.getElementById("inputPasswordConfirm").value;
+
+            if (password !== confirmPassword) {
+                event.preventDefault(); // Detiene el envío del formulario
+                alert("Las contraseñas no coinciden. Por favor, verificalo.");
+            }
+        });
+    </script>
+        
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
         <script src="js/scripts.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>

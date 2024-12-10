@@ -9,9 +9,14 @@ Persistencia\ControladoraPersistencia.class
 Persistencia\ApoderadoJpaController.class
 Logica\ControloadoraLogica.class
 Persistencia\UsuarioJpaController.class
+Servlets\SVEditarMaestro.class
+Servlets\SVEliminaEstudiante.class
+Servlets\SVEditarProducto.class
 Servlets\SVEliminarMaestros.class
 Logica\Estudiante.class
 Logica\Usuario.class
+Servlets\SVBuscarEstudiante.class
+Servlets\SVEditarEstudiante.class
 Logica\Estudiante_.class
 Logica\Usuario_.class
 Persistencia\EstudianteJpaController.class
@@ -24,6 +29,7 @@ Servlets\SVEstudiante.class
 Persistencia\PersonaJpaController.class
 Logica\Apoderado.class
 Logica\Inventario_.class
+Servlets\SVBuscarProducto.class
 Logica\Docente_.class
 Servlets\SVUsuarios.class
 Servlets\SVEliminarProducto.class

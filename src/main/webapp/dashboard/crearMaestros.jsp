@@ -14,17 +14,17 @@
                         <div class="card shadow-lg border-0 rounded-lg mt-5" style="background: transparent; backdrop-filter: blur(20px); border-radius: 10px; padding: 30px 40px; box-shadow: 0 0 10px rgba(0, 0, 0, .2);  border: 2px solid rgba(255, 255, 255, .2);">
                             <div class="card-header" style="background: #1c1e21"><h3 class="text-center text-white font-weight-light my-4">Datos del Maestros</h3></div>
                             <div class="card-body">
-                                <form action="../SVDocente" method="POST">
+                                <form action="../SVDocente" method="POST" id="formulario">
                                     <div class="row mb-3">
                                         <div class="col-md-6" >
                                             <div class="form-floating mb-3 mb-md-0">
-                                                <input class="form-control" name="inputNombre" type="text" placeholder="Ingrese sus nombres" />
+                                                <input class="form-control" name="inputNombre" type="text" placeholder="Ingrese sus nombres" required />
                                                 <label for="inputNombre">Nombres</label>
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-floating">
-                                                <input class="form-control" name="inputApellido" type="text" placeholder="Ingrese sus apellidos" />
+                                                <input class="form-control" name="inputApellido" type="text" placeholder="Ingrese sus apellidos" required />
                                                 <label for="inputApellido">Apellidos</label>
                                             </div>
                                         </div>
@@ -32,13 +32,13 @@
                                     <div class="row mb-3">
                                         <div class="col-md-6">
                                             <div class="form-floating mb-3 mb-md-0">
-                                                <input class="form-control" name="inputDNI" type="text" placeholder="Ingrese su DNI" />
+                                                <input class="form-control" name="inputDNI" type="text" placeholder="Ingrese su DNI" required />
                                                 <label for="inputDNI">DNI</label>
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-floating">
-                                                <input class="form-control" name="inputNacimiento" type="date" placeholder="Ingrese su fecha de nacimiento" min="1900-01-01" max="2200-12-31" />
+                                                <input class="form-control" name="inputNacimiento" type="date" placeholder="Ingrese su fecha de nacimiento" min="1900-01-01" max="2200-12-31" required />
                                                 <label for="inputNacimiento">fecha de Nacimiento</label>
                                             </div>
                                         </div>
@@ -46,19 +46,19 @@
                                     <div class="row mb-3">
                                         <div class="col-md-6">
                                             <div class="form-floating mb-3 mb-md-0">
-                                                <input class="form-control" name="inputTelefono" type="tel" placeholder="Ingrese su Telefono" pattern="[0-9]{9}" title="Debe ingresar un número de 9 dígitos" />
+                                                <input class="form-control" name="inputTelefono" type="tel" placeholder="Ingrese su Telefono" pattern="[0-9]{9}" title="Debe ingresar un número de 9 dígitos" required />
                                                 <label for="inputTelefono">Teléfono/celular</label>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="card card-header col-lg-10" style="background: #1c1e21">
+                                    <div class="card card-header col-lg-12" style="background: #1c1e21">
                                         <h3 class="text-center text-white font-weight-light my-4">Registro de Usuario</h3>
                                     </div>
                                     <hr>
                                     <div class="row mb-3">
                                         <div class="col-md-6">
                                             <div class="form-floating mb-3 mb-md-0">
-                                                <select class="form-control" name="inputRol" aria-label="Rol">
+                                                <select class="form-control" name="inputRol" aria-label="Rol" required >
                                                     <option value="" disabled selected>Seleccione el Rol que tendra el usuario</option>
                                                     <option value="Administrador">Administrador</option>
                                                     <option value="Administrativo">No-Administrador</option>
@@ -69,7 +69,7 @@
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-floating mb-3 mb-md-0">
-                                                <input class="form-control" name="inputUsuario" type="text" placeholder="cree su usuario" />
+                                                <input class="form-control" name="inputUsuario" type="text" placeholder="cree su usuario" required />
                                                 <label for="inputUsuario">Usuario</label>
                                             </div>
                                         </div>
@@ -77,13 +77,13 @@
                                     <div class="row mb-3">
                                         <div class="col-md-6">
                                             <div class="form-floating mb-3 mb-md-0">
-                                                <input class="form-control" name="inputPassword" type="password" placeholder="Crea una contraseña" />
+                                                <input class="form-control" name="inputPassword" id="inputPassword" type="password" placeholder="Crea una contraseña" required />
                                                 <label for="inputPassword">Contraseña</label>
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-floating mb-3 mb-md-0">
-                                                <input class="form-control" name="inputPasswordConfirm" type="password" placeholder="Confirm password" />
+                                                <input class="form-control" name="inputPasswordConfirm" id="inputPasswordConfirm" type="password" placeholder="Confirm password" required />
                                                 <label for="inputPasswordConfirm">Confirma tu Contraseña</label>
                                             </div>
                                         </div>
@@ -100,6 +100,7 @@
         </main>
     </div>
 
+    
 
     <%@include file="componentesDashboard/footer.jsp" %>
 
