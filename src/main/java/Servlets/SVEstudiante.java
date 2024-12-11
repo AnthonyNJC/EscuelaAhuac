@@ -78,7 +78,7 @@ public class SVEstudiante extends HttpServlet {
         
         controlLogico.crearApoderado(nombreApoderado, apellidoApoderado, DNIApoderado, fechaNacimientoApoderado, parentesco, telefono, estudiante1);
         
-        response.sendRedirect("dashboard/index.jsp");
+        response.sendRedirect("SVEstudiante");
         
     }
 

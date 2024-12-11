@@ -45,43 +45,57 @@
                                     <th style="width: 210px">Acción</th>
                                 </tr>
                             </tfoot>
-                                    <%
-                                        List<Docente> listaDocentes = (List) request.getSession().getAttribute("listaDocentes");
-                                    %> 
-                            
+                            <%                                        List<Docente> listaDocentes = (List) request.getSession().getAttribute("listaDocentes");
+                            %> 
+
                             <tbody>
-                                     <%
-                                        for (Docente doc : listaDocentes) {
+                                <%
+                                    for (Docente doc : listaDocentes) {
                                         SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy");
-                                    %> 
-                                    <tr>
-                                        <td><%=doc.getId()%></td>
-                                        <td><%=doc.getNombre() +" "+ doc.getApellido()%></td>
-                                        <td><%=doc.getDni()%></td>
-                                        <td><%=doc.getTelefono()%></td>
-                                        <%
-                                        Date fecha =doc.getFechaNacimiento();
-                                        String fechaString = formatter.format(fecha);
-                                        %> 
-                                        <td><%=fechaString%></td>
-                                        <td style="display: flex; width: 230px;">
-                                            <form name="eliminar" action="../SVEliminarMaestros" method="POST"> <!-- esto es para mandar el codigo al servlet -->
-                                                <button type="submit" class="btn btn-primary btn-user btn-block" style="background-color:red; margin-right: 5px;">
-                                                    <i class="fas fa-trash-alt"></i> Eliminar
-                                                </button>
-                                                <input type="hidden" name="id" value="<%= doc.getId()%>"> <!-- esto es para mandar el codigo al servlet -->
-                                            </form>
-                                            <form name="editar" action="../SVEditarMaestro" method="GET"> <!-- esto es para mandar el codigo al servlet -->
-                                                <button type="submit" class="btn btn-primary btn-user btn-block" style="margin-left: 5px;">
-                                                    <i class="fas fa-pencil-alt"></i> Editar
-                                                </button>
-                                                <input type="hidden" name="id" value="<%= doc.getId()%>"> <!-- esto es para mandar el codigo al servlet -->
-                                            </form>
-                                        </td>
-                                    </tr>
+                                %> 
+                                <tr>
+                                    <td><%=doc.getId()%></td>
+                                    <td><%=doc.getNombre() + " " + doc.getApellido()%></td>
+                                    <td><%=doc.getDni()%></td>
+                                    <td><%=doc.getTelefono()%></td>
                                     <%
-                                        }
+                                        Date fecha = doc.getFechaNacimiento();
+                                        String fechaString = formatter.format(fecha);
                                     %> 
+                                    <td><%=fechaString%></td>
+                                    <td style="display: flex; width: 230px;">
+                                        <% if (usuario.getRol().equalsIgnoreCase("Administrador")) {%>
+                                        <!-- Botón Eliminar -->
+                                        <form name="eliminar" action="../SVEliminarMaestros" method="POST"> <!-- esto es para mandar el código al servlet -->
+                                            <button type="submit" class="btn btn-primary btn-user btn-block" style="background-color:red; margin-right: 5px;">
+                                                <i class="fas fa-trash-alt"></i> Eliminar
+                                            </button>
+                                            <input type="hidden" name="id" value="<%= doc.getId()%>"> <!-- esto es para mandar el código al servlet -->
+                                        </form>
+                                        <!-- Botón Editar -->
+                                        <form name="editar" action="../SVEditarMaestro" method="GET"> <!-- esto es para mandar el código al servlet -->
+                                            <button type="submit" class="btn btn-primary btn-user btn-block" style="margin-left: 5px;">
+                                                <i class="fas fa-pencil-alt"></i> Editar
+                                            </button>
+                                            <input type="hidden" name="id" value="<%= doc.getId()%>"> <!-- esto es para mandar el código al servlet -->
+                                        </form>
+                                        <% } else { %>
+                                        <!-- Mensaje de acceso restringido o botones desactivados -->
+                                        <button type="button" class="btn btn-secondary btn-block" disabled style="margin-right: 5px;">
+                                            <i class="fas fa-trash-alt"></i> Eliminar
+                                        </button>
+                                        <button type="button" class="btn btn-secondary btn-block" disabled style="margin-left: 5px;">
+                                            <i class="fas fa-pencil-alt"></i> Editar
+                                        </button>
+                                        <% } %>
+                                    </td>
+
+
+
+                                </tr>
+                                <%
+                                    }
+                                %> 
 
                             </tbody>
                         </table>

@@ -17,8 +17,7 @@
                         <div class="card shadow-lg border-0 rounded-lg mt-5" style="background: transparent; backdrop-filter: blur(20px); border-radius: 10px; padding: 30px 40px; box-shadow: 0 0 10px rgba(0, 0, 0, .2);  border: 2px solid rgba(255, 255, 255, .2);">
                             <div class="card-header" style="background: #1c1e21"><h3 class="text-center text-white font-weight-light my-4">Modificar Datos del Maestros</h3></div>
                             <div class="card-body">
-                                <%
-                                    Docente docente = (Docente) request.getSession().getAttribute("maestro");
+                                <%                                    Docente docente = (Docente) request.getSession().getAttribute("maestro");
                                 %>
                                 <form action="../SVEditarMaestro" method="POST" id="formulario">
                                     <div class="row mb-3">
@@ -49,7 +48,7 @@
                                         %>
                                         <div class="col-md-6">
                                             <div class="form-floating">
-                                                <input class="form-control" name="inputNacimiento" type="date"  min="1900-01-01" max="2200-12-31" value="<%= fecha %>"/>
+                                                <input class="form-control" name="inputNacimiento" type="date"  min="1900-01-01" max="2200-12-31" value="<%= fecha%>"/>
                                                 <label for="inputNacimiento">fecha de Nacimiento</label>
                                             </div>
                                         </div>
@@ -69,17 +68,32 @@
                                     <div class="row mb-3">
                                         <div class="col-md-6">
                                             <div class="form-floating mb-3 mb-md-0">
+                                                <%
+                                                    Usuario user4 = (Usuario) request.getSession().getAttribute("usuarioLogeado");
+
+                                                    if (user4.getRol().equalsIgnoreCase("Administrador")) {
+
+                                                %>
                                                 <select class="form-control" name="inputRol" aria-label="Rol" >
-                                                    <option value="Administrador" <%= "Administrador".equals(docente.getUsuario().getRol()) ? "selected" : "" %>>Administrador</option>
-                                                    <option value="No-Administrador" <%= "No-Administrador".equals(docente.getUsuario().getRol()) ? "selected" : "" %>>No-Administrador</option>
+                                                    <option value="Administrador" <%= "Administrador".equals(docente.getUsuario().getRol()) ? "selected" : ""%>>Administrador</option>
+                                                    <option value="No-Administrador" <%= "No-Administrador".equals(docente.getUsuario().getRol()) ? "selected" : ""%>>No-Administrador</option>
                                                 </select>
                                                 <label for="inputRol">Rol</label>
+                                                <% } else {
+
+                                                %>
+                                                <select class="form-control" disabled name="inputRol" aria-label="Rol" >
+                                                    <option value="No-Administrador" >No-Administrador</option>
+                                                </select>
+                                                <label for="inputRol">Rol</label>
+                                                <%                                                    }
+                                                %>
                                             </div>
 
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-floating mb-3 mb-md-0">
-                                                <input class="form-control" name="inputUsuario" type="text" value="<%= docente.getUsuario().getNombreUsuario() %>" />
+                                                <input class="form-control" name="inputUsuario" type="text" value="<%= docente.getUsuario().getNombreUsuario()%>" />
                                                 <label for="inputUsuario">Usuario</label>
                                             </div>
                                         </div>
@@ -87,7 +101,7 @@
                                     <div class="row mb-3">
                                         <div class="col-md-6">
                                             <div class="form-floating mb-3 mb-md-0">
-                                                <input class="form-control" name="inputPassword" id="inputPassword" type="password" value="<%= docente.getUsuario().getContrasenia() %>" />
+                                                <input class="form-control" name="inputPassword" id="inputPassword" type="password" />
                                                 <label for="inputPassword">Contraseña</label>
                                             </div>
                                         </div>

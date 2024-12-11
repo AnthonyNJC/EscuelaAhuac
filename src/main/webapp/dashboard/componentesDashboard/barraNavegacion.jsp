@@ -1,4 +1,5 @@
-    <div id="layoutSidenav">
+    <%@page import="Logica.Usuario"%>
+<div id="layoutSidenav">
         <div id="layoutSidenav_nav">
             <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
                 <div class="sb-sidenav-menu">
@@ -57,7 +58,11 @@
                 </div>
                 <div class="sb-sidenav-footer">
                     <div class="small">Sesion de usuario como:</div>
-                    Carlos
+                    <%
+                        Usuario user= (Usuario) request.getSession().getAttribute("usuarioLogeado");
+                        
+                    %>
+                    <%= user.getNombreUsuario() %>
                 </div>
             </nav>
         </div>

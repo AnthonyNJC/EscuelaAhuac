@@ -10,10 +10,10 @@
     <class>Logica.Usuario</class>
     <exclude-unlisted-classes>false</exclude-unlisted-classes>
     <properties>
-      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/escuela_ahuac?serverTimezone=UTC"/>
-      <property name="javax.persistence.jdbc.user" value="root"/>
+      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://sql10.freesqldatabase.com:3306/sql10751307?serverTimezone=UTC"/>
+      <property name="javax.persistence.jdbc.user" value="sql10751307"/>
       <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
-      <property name="javax.persistence.jdbc.password" value="yosoyyo"/>
+      <property name="javax.persistence.jdbc.password" value="jeDv87ap8b"/>
       <property name="javax.persistence.schema-generation.database.action" value="create"/>
     </properties>
   </persistence-unit>

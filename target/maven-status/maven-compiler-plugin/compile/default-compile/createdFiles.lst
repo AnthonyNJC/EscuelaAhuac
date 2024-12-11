@@ -25,11 +25,13 @@ Persistencia\exceptions\PreexistingEntityException.class
 Persistencia\InventarioJpaController.class
 Logica\Docente.class
 Logica\Persona_.class
+Logica\PasswordUtil.class
 Servlets\SVEstudiante.class
 Persistencia\PersonaJpaController.class
 Logica\Apoderado.class
 Logica\Inventario_.class
 Servlets\SVBuscarProducto.class
+Servlets\SVLogin.class
 Logica\Docente_.class
 Servlets\SVUsuarios.class
 Servlets\SVEliminarProducto.class

@@ -5,14 +5,14 @@
             <div class="col-md-4">
                 <h5 class="mb-3 text-warning">Información</h5>
                 <ul class="list-unstyled">
-                    <li class="mb-2"><a href="#about">Sobre nosotros</a></li>
-                    <li class="mb-2"><a href="#admissions">Admisiones</a></li>
+                    <li class="mb-2"><a href="#section5">Sobre nosotros</a></li>
+                    <li class="mb-2"><a href="#admissions">Matricula</a></li>
                     <li class="mb-2"><a href="#academics">Académicos</a></li>
                     <li class="mb-2"><a href="#contact">Contacto</a></li>
                 </ul>
             </div>
             <div class="col-md-4">
-                <h5 class="mb-3 text-warning">Enlaces útiles</h5>
+                <h5 class="mb-3 text-warning">Actividades</h5>
                 <ul class="list-unstyled">
                     <li class="mb-2"><a href="#calendar">Calendario escolar</a></li>
                     <li class="mb-2"><a href="#events">Eventos</a></li>
@@ -25,6 +25,7 @@
                 <p class="mb-2">
                     Dirección: Tupac Amaru con Minerva<br>
                     Chupaca-ahuac<br>
+                    Numero de Contacto: 964 862 222<br>
                    <!--  Teléfono: (123) 456-7890<br>
                     Email: <a href="mailto:info@colegioejemplo.edu">info@colegioejemplo.edu</a> -->
                 </p>
@@ -33,7 +34,7 @@
         <div class="row">
             <div class="col-md-12 text-center">
                 <p class="mt-3"><i class="fa fa-copyright"></i> Colegio Nuestra Señora de Fatima 
-                   | Diseño: <a href="https://templatemo.com" rel="sponsored" target="_parent">UNCP</a>
+                   
                 </p>
             </div>
         </div>

@@ -13,6 +13,7 @@
                 <p class="mb-2 text-white" style="font-size: 1.5rem; line-height: 1.8;">
                     Dirección: Tupac Amaru con Minerva<br>
                     Ahuac - Chupaca<br>
+                    Numero de contacto: 964 862 222<br>
                     <!--   Teléfono: (064) 456-7890<br>
                     Email: <a href="mailto:info@colegioejemplo.edu">nuestraseñorafatima@ahuac.gmail.com</a>comment -->  
                 </p>

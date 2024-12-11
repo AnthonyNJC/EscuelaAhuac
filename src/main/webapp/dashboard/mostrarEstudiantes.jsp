@@ -116,18 +116,30 @@
                                     <td><%=est.getApoderado().getParentesco()%></td>
                                     <td><%=est.getApoderado().getTelefono()%></td>
                                     <td style="display: flex; width: 230px;">
-                                        <form name="eliminar" action="../SVEliminaEstudiante" method="POST"> <!-- esto es para mandar el codigo al servlet -->
+                                        <% if (usuario.getRol().equalsIgnoreCase("Administrador")) {%>
+                                        <!-- Botón Eliminar -->
+                                        <form name="eliminar" action="../SVEliminaEstudiante" method="POST"> <!-- esto es para mandar el código al servlet -->
                                             <button type="submit" class="btn btn-primary btn-user btn-block" style="background-color:red; margin-right: 5px;">
                                                 <i class="fas fa-trash-alt"></i> Eliminar
                                             </button>
-                                            <input type="hidden" name="id" value="<%= est.getId()%>"> <!-- esto es para mandar el codigo al servlet -->
+                                            <input type="hidden" name="id" value="<%= est.getId()%>"> <!-- esto es para mandar el código al servlet -->
                                         </form>
-                                        <form name="editar" action="../SVEditarEstudiante" method="GET"> <!-- esto es para mandar el codigo al servlet -->
+                                        <!-- Botón Editar -->
+                                        <form name="editar" action="../SVEditarEstudiante" method="GET"> <!-- esto es para mandar el código al servlet -->
                                             <button type="submit" class="btn btn-primary btn-user btn-block" style="margin-left: 5px;">
                                                 <i class="fas fa-pencil-alt"></i> Editar
                                             </button>
-                                            <input type="hidden" name="id" value="<%= est.getId()%>"> <!-- esto es para mandar el codigo al servlet -->
+                                            <input type="hidden" name="id" value="<%= est.getId()%>"> <!-- esto es para mandar el código al servlet -->
                                         </form>
+                                        <% } else { %>
+                                        <!-- Mensaje de acceso restringido o botones desactivados -->
+                                        <button type="button" class="btn btn-secondary btn-block" disabled style="margin-right: 5px;">
+                                            <i class="fas fa-trash-alt"></i> Eliminar
+                                        </button>
+                                        <button type="button" class="btn btn-secondary btn-block" disabled style="margin-left: 5px;">
+                                            <i class="fas fa-pencil-alt"></i> Editar
+                                        </button>
+                                        <% } %>
                                     </td>
                                 </tr>
                                 <%

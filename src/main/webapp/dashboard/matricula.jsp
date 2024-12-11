@@ -122,7 +122,20 @@
                                         </div>
                                     </div>
                                     <div class="mt-4 mb-0">
+                                        <%
+                                            Usuario user2 = (Usuario)request.getSession().getAttribute("usuarioLogeado");
+                                            
+                                            if(user2.getRol().equalsIgnoreCase("Administrador")){
+                                            
+                                        %>
                                         <div class="d-grid"><button class="btn btn-primary btn-block" style="background: #1c1e21" type="submit">Registrar Matricula</button></div>
+                                       <% }else{
+                                            
+                                       %>
+                                        <div class="d-grid"><button class="btn btn-secondary btn-block" disabled style="background: #1c1e21" >Registrar Matricula</button></div>
+                                        <%
+                                            }
+                                        %>
                                     </div>
                                 </form>
                             </div>

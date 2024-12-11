@@ -1,6 +1,7 @@
 package Logica;
 
 import Persistencia.ControladoraPersistencia;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -147,6 +148,41 @@ public class ControloadoraLogica {
 
     public void editarProducto(Inventario producto) {
         controlPersistencia.editarProducto(producto);
+    }
+    
+    
+    
+    
+    //LOGIN
+
+    public boolean comprobarIngreso(String usuario, String contrasenia) {
+        boolean validacion=false;
+        List<Usuario> listaUsuarios = new ArrayList<Usuario>();
+        listaUsuarios=controlPersistencia.mostrarUsuarios();
+        
+        for(Usuario usu : listaUsuarios){
+            if(usu.getNombreUsuario().equals(usuario)){
+                if(usu.getContrasenia().equals(contrasenia)){
+                    validacion=true;
+                }
+            }
+            
+        }
+        return validacion;
+    }
+    public Usuario usuarioId(String usuario, String contrasenia) {
+        List<Usuario> listaUsuarios = new ArrayList<Usuario>();
+        listaUsuarios=controlPersistencia.mostrarUsuarios();
+        
+        for(Usuario usu : listaUsuarios){
+            if(usu.getNombreUsuario().equals(usuario)){
+                if(usu.getContrasenia().equals(contrasenia)){
+                    return usu;
+                }
+            }
+            
+        }
+        return null;
     }
 
     

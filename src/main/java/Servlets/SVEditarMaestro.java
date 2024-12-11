@@ -2,6 +2,7 @@ package Servlets;
 
 import Logica.ControloadoraLogica;
 import Logica.Docente;
+import Logica.PasswordUtil;
 import Logica.Usuario;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -67,6 +68,9 @@ public class SVEditarMaestro extends HttpServlet {
         String usuario = request.getParameter("inputUsuario");
         String contrasenia = request.getParameter("inputPassword");
         
+        //hasheo de la contraseña
+        String hashedPassword = PasswordUtil.hashPassword(contrasenia);
+        
          Docente maestro1 = (Docente) request.getSession().getAttribute("maestro");
         
         maestro1.setNombre(nombre);
@@ -78,7 +82,7 @@ public class SVEditarMaestro extends HttpServlet {
         Usuario user = maestro1.getUsuario();
         user.setNombreUsuario(usuario);
         user.setRol(rol);
-        user.setContrasenia(contrasenia);
+        user.setContrasenia(hashedPassword);
         
         controlLogico.editarUsuario(user);
         

@@ -490,14 +490,14 @@ section.features .col-4 {
 /* Why Choosing Us */
 
 section.why-us-inicial{
-    background-image: url(../images/8-copia.jpeg);
+    background-image: url(../images/choosing-bg.jpg);
     background-color: #172238;
     background-repeat: no-repeat;
     background-size: cover;
     padding-bottom: 100px;
 }
 section.why-us-primaria {
-    background-image: url(../images/imagen-ahuac-copia.jpeg);
+    background-image: url(../images/choosing-bg.jpg);
     background-color: #172238;
     background-repeat: no-repeat;
     background-size: cover;

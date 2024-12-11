@@ -1,3 +1,4 @@
+<%@page import="Logica.Usuario"%>
 <body>
     <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
         <!-- Navbar Brand-->
@@ -7,8 +8,6 @@
         <!-- Navbar Search-->
         <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
             <div class="input-group">
-                <input class="form-control" type="text" placeholder="Search for..." aria-label="Search for..." aria-describedby="btnNavbarSearch" />
-                <button class="btn btn-primary" id="btnNavbarSearch" type="button"><i class="fas fa-search"></i></button>
             </div>
         </form>
         <!-- Navbar-->
@@ -16,10 +15,17 @@
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="#!">Ajustes</a></li>
-                    <li><a class="dropdown-item" href="#!">Actividad</a></li>
+                    <li><form name="editar" action="../SVEditarMaestro" method="GET" class="dropdown-item"> <!-- esto es para mandar el codigo al servlet -->
+                            <button type="submit" >
+                                <i class="fas fa-pencil-alt"></i> Modificar Usuario
+                            </button>
+                            <%
+                                Usuario user1 = (Usuario) request.getSession().getAttribute("usuarioLogeado");
+                            %>
+                            <input type="hidden" name="id" value="<%= user1.getIdUsuario() %>"> <!-- esto es para mandar el codigo al servlet -->
+                        </form></li>
                     <li><hr class="dropdown-divider" /></li>
-                    <li><a class="dropdown-item" href="../index.jsp">Cerrar Sessión</a></li>
+                    <li><a class="dropdown-item" href="../SVLogin">Cerrar Sessión</a></li>
                 </ul>
             </li>
         </ul>

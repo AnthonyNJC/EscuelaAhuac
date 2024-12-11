@@ -2,6 +2,7 @@ package Servlets;
 
 import Logica.ControloadoraLogica;
 import Logica.Docente;
+import Logica.PasswordUtil;
 import Logica.Usuario;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -70,12 +71,16 @@ public class SVDocente extends HttpServlet {
         String rol = request.getParameter("inputRol");
         String usuario = request.getParameter("inputUsuario");
         String contrasenia = request.getParameter("inputPassword");
+        
+        
+        // Hash de la contraseña
+        String hashedPassword = PasswordUtil.hashPassword(contrasenia);
 
         Docente docente1 =controlLogica.crearMaestro(nombre, apellido, DNI, fechaNacimiento, telefono);
         
-        controlLogica.crearUsuario(usuario, contrasenia, rol, docente1);
+        controlLogica.crearUsuario(usuario, hashedPassword, rol, docente1);
         
-        response.sendRedirect("dashboard/index.jsp");
+        response.sendRedirect("SVDocente");
         
     }
 

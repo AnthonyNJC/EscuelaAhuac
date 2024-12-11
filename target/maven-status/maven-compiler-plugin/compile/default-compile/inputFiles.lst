@@ -3,6 +3,7 @@ D:\NetBeans-17\Neatbeans-Projects\EscuelaAhuac\src\main\java\Logica\Controloador
 D:\NetBeans-17\Neatbeans-Projects\EscuelaAhuac\src\main\java\Logica\Docente.java
 D:\NetBeans-17\Neatbeans-Projects\EscuelaAhuac\src\main\java\Logica\Estudiante.java
 D:\NetBeans-17\Neatbeans-Projects\EscuelaAhuac\src\main\java\Logica\Inventario.java
+D:\NetBeans-17\Neatbeans-Projects\EscuelaAhuac\src\main\java\Logica\PasswordUtil.java
 D:\NetBeans-17\Neatbeans-Projects\EscuelaAhuac\src\main\java\Logica\Persona.java
 D:\NetBeans-17\Neatbeans-Projects\EscuelaAhuac\src\main\java\Logica\Usuario.java
 D:\NetBeans-17\Neatbeans-Projects\EscuelaAhuac\src\main\java\Persistencia\ApoderadoJpaController.java
@@ -26,4 +27,5 @@ D:\NetBeans-17\Neatbeans-Projects\EscuelaAhuac\src\main\java\Servlets\SVEliminar
 D:\NetBeans-17\Neatbeans-Projects\EscuelaAhuac\src\main\java\Servlets\SVEliminarProducto.java
 D:\NetBeans-17\Neatbeans-Projects\EscuelaAhuac\src\main\java\Servlets\SVEstudiante.java
 D:\NetBeans-17\Neatbeans-Projects\EscuelaAhuac\src\main\java\Servlets\SVInventario.java
+D:\NetBeans-17\Neatbeans-Projects\EscuelaAhuac\src\main\java\Servlets\SVLogin.java
 D:\NetBeans-17\Neatbeans-Projects\EscuelaAhuac\src\main\java\Servlets\SVUsuarios.java
