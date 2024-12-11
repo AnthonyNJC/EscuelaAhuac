@@ -1,3 +1,4 @@
+Logica\SVInicio.class
 Persistencia\exceptions\IllegalOrphanException.class
 Servlets\SVInventario.class
 Persistencia\DocenteJpaController.class
@@ -31,7 +32,6 @@ Persistencia\PersonaJpaController.class
 Logica\Apoderado.class
 Logica\Inventario_.class
 Servlets\SVBuscarProducto.class
-Servlets\SVInicio.class
 Servlets\SVLogin.class
 Logica\Docente_.class
 Servlets\SVUsuarios.class
