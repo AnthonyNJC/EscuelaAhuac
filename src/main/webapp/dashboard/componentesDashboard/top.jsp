@@ -1,3 +1,4 @@
+<%@page import="Logica.Docente"%>
 <%@page import="Logica.Usuario"%>
 <body>
     <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
@@ -21,8 +22,10 @@
                             </button>
                             <%
                                 Usuario user1 = (Usuario) request.getSession().getAttribute("usuarioLogeado");
+                                
+                                Docente doc1 = user1.getDocente();
                             %>
-                            <input type="hidden" name="id" value="<%= user1.getIdUsuario() %>"> <!-- esto es para mandar el codigo al servlet -->
+                            <input type="hidden" name="id" value="<%= doc1.getId() %>"> <!-- esto es para mandar el codigo al servlet -->
                         </form></li>
                     <li><hr class="dropdown-divider" /></li>
                     <li><a class="dropdown-item" href="../SVLogin">Cerrar Sessión</a></li>
