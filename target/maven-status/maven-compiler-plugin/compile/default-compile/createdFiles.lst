@@ -31,6 +31,7 @@ Persistencia\PersonaJpaController.class
 Logica\Apoderado.class
 Logica\Inventario_.class
 Servlets\SVBuscarProducto.class
+Servlets\SVInicio.class
 Servlets\SVLogin.class
 Logica\Docente_.class
 Servlets\SVUsuarios.class
