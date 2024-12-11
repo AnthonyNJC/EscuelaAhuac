@@ -1,2 +1,2 @@
 Manifest-Version: 1.0
-Main-Class: com.Proyecto.SVInicio
+Main-Class: com.Logica.SVInicio
