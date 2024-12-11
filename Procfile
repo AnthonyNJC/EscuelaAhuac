@@ -1,1 +1,1 @@
-web: java -Dserver.port=$PORT -jar target/EscuelaAhuac-1.war
+web: java -Dserver.port=$PORT -jar target/*.war
