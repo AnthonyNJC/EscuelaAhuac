@@ -6,8 +6,8 @@
 
       <div class="video-overlay header-text">
           <div class="caption">
-              <h6>Escuela Nuestra Señora de Fatima</h6>
-              <h2><em>Escuela</em> Ahuac</h2>
+              <h6>Escuela N° 30064</h6>
+              <h2><em>Nuestra Señora </em> de Fátima</h2>
               <div class="main-button">
                   <div class="scroll-to-section"><a href="#section5">Descubre más</a></div>
               </div>

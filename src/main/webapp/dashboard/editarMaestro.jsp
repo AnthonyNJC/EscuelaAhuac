@@ -113,7 +113,7 @@
                                         </div>
                                     </div>
                                     <div class="mt-4 mb-0 row">
-                                        <div class="d-grid col-md-6"><a class="btn btn-primary btn-block" style="background: #1c1e21" href="mostrarMaestros.jsp">Regresar</a></div>
+                                        <div class="d-grid col-md-6"><a class="btn btn-primary btn-block" style="background: #1c1e21" href="../SVDocente">Regresar</a></div>
                                         <div class="d-grid col-md-6"><button class="btn btn-primary btn-block" style="background: #1c1e21" type="submit">Guardar Cambios</button></div>
                                     </div>
                                 </form>

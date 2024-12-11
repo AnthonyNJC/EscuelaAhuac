@@ -70,7 +70,7 @@ public class SVInventario extends HttpServlet {
         
         controlLogico.crearProducto(nombre, codigo, marca, modelo, fecha, tipo, centroCostos, ubicacion, estado);
         
-        response.sendRedirect("dashboard/index.jsp");
+        response.sendRedirect("SVInventario");
         
     }
     @Override

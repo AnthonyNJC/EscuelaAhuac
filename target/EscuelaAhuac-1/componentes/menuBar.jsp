@@ -4,7 +4,7 @@
     <!--header-->
     <header class="main-header clearfix" role="header">
         <div class="logo">
-            <a href="index.jsp"><em>Escuela</em> Ahuac</a>
+            <a href="index.jsp"><em>Nuestra Señora</em> de Fátima</a>
         </div>
         <a href="#menu" class="menu-link"><i class="fa fa-bars"></i></a>
         <nav id="menu" class="main-nav" role="navigation">
