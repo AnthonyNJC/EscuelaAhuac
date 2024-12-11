@@ -16,6 +16,7 @@ public class SVInicio extends HttpServlet {
  
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        response.sendRedirect("index.jsp");
        
     }
 
