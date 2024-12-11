@@ -7,7 +7,7 @@
 
     <servlet>
         <servlet-name>SVInicio</servlet-name>
-        <servlet-class>com.Logica.SVInicio</servlet-class>
+        <servlet-class>Logica.SVInicio</servlet-class>
     </servlet>
 
     <servlet-mapping>
