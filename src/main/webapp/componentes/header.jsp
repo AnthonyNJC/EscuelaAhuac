@@ -10,6 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
+    <meta name="google-site-verification" content="ikeXpKIQrHkqD-1D4xDxyct3uiOuu3rXIXpWnq8_3UI" />
     <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900" rel="stylesheet">
 
     <title>Escuela Ahuac</title>
