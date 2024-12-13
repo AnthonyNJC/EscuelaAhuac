@@ -99,7 +99,7 @@
                                         </div>
                                     </div>
                                     <div class="row mb-3">
-                                        <div class="col-md-12" >
+                                        <div class="col-md-6" >
                                             <div class="form-floating ">
                                                 <input class="form-control" name="inputEstado" type="text" placeholder="Ingrese el estado del objeto" required />
                                                 <label for="inputEstado">Estado</label>

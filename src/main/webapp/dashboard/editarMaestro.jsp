@@ -9,11 +9,10 @@
 <%@include file="componentesDashboard/barraNavegacion.jsp" %>
 
 <div id="layoutSidenav_content" style="background-image: url(assetsDashboard/img/2.jpeg); background-repeat: no-repeat; background-size: cover" class="col-lg-auto">
-    <div id="layoutSidenav_content">
         <main >
             <div class="container"  >
-                <div class="row justify-content-between">
-                    <div class="col-lg-10 container-fluid px-4">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10 col-md-12 px-4">
                         <div class="card shadow-lg border-0 rounded-lg mt-5" style="background: transparent; backdrop-filter: blur(20px); border-radius: 10px; padding: 30px 40px; box-shadow: 0 0 10px rgba(0, 0, 0, .2);  border: 2px solid rgba(255, 255, 255, .2);">
                             <div class="card-header" style="background: #1c1e21"><h3 class="text-center text-white font-weight-light my-4">Modificar Datos del Maestros</h3></div>
                             <div class="card-body">
@@ -21,8 +20,8 @@
                                 %>
                                 <form action="../SVEditarMaestro" method="POST" id="formulario">
                                     <div class="row mb-3">
-                                        <div class="col-md-6" >
-                                            <div class="form-floating mb-3 mb-md-0">
+                                        <div class="col-md-6 mb-3" >
+                                            <div class="form-floating">
                                                 <input class="form-control" name="inputNombre" type="text" value="<%= docente.getNombre()%>" />
                                                 <label for="inputNombre">Nombres</label>
                                             </div>
@@ -35,8 +34,8 @@
                                         </div>
                                     </div>
                                     <div class="row mb-3">
-                                        <div class="col-md-6">
-                                            <div class="form-floating mb-3 mb-md-0">
+                                        <div class="col-md-6 mb-3">
+                                            <div class="form-floating">
                                                 <input class="form-control" name="inputDNI" type="text" value="<%= docente.getDni()%>" />
                                                 <label for="inputDNI">DNI</label>
                                             </div>
@@ -55,7 +54,7 @@
                                     </div>
                                     <div class="row mb-3">
                                         <div class="col-md-6">
-                                            <div class="form-floating mb-3 mb-md-0">
+                                            <div class="form-floating">
                                                 <input class="form-control" name="inputTelefono" type="tel" value="<%= docente.getTelefono()%>" pattern="[0-9]{9}" title="Debe ingresar un número de 9 dígitos" />
                                                 <label for="inputTelefono">Teléfono/celular</label>
                                             </div>
@@ -66,8 +65,8 @@
                                     </div>
                                     <hr>
                                     <div class="row mb-3">
-                                        <div class="col-md-6">
-                                            <div class="form-floating mb-3 mb-md-0">
+                                        <div class="col-md-6 mb-3">
+                                            <div class="form-floating">
                                                 <%
                                                     Usuario user4 = (Usuario) request.getSession().getAttribute("usuarioLogeado");
 
@@ -92,27 +91,27 @@
 
                                         </div>
                                         <div class="col-md-6">
-                                            <div class="form-floating mb-3 mb-md-0">
+                                            <div class="form-floating">
                                                 <input class="form-control" name="inputUsuario" type="text" value="<%= docente.getUsuario().getNombreUsuario()%>" />
                                                 <label for="inputUsuario">Usuario</label>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="row mb-3">
-                                        <div class="col-md-6">
-                                            <div class="form-floating mb-3 mb-md-0">
+                                        <div class="col-md-6 mb-3">
+                                            <div class="form-floating">
                                                 <input class="form-control" name="inputPassword" id="inputPassword" type="password" />
                                                 <label for="inputPassword">Contraseña</label>
                                             </div>
                                         </div>
                                         <div class="col-md-6">
-                                            <div class="form-floating mb-3 mb-md-0">
+                                            <div class="form-floating">
                                                 <input class="form-control" name="inputPasswordConfirm" id="inputPasswordConfirm" type="password" placeholder="Confirm password" />
                                                 <label for="inputPasswordConfirm">Confirma tu Contraseña</label>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="mt-4 mb-0 row">
+                                    <div class="mt-4 mb-3 row">
                                         <div class="d-grid col-md-6"><a class="btn btn-primary btn-block" style="background: #1c1e21" href="../SVDocente">Regresar</a></div>
                                         <div class="d-grid col-md-6"><button class="btn btn-primary btn-block" style="background: #1c1e21" type="submit">Guardar Cambios</button></div>
                                     </div>
@@ -123,7 +122,6 @@
                 </div>
             </div>
         </main>
+    <%@include file="componentesDashboard/footer.jsp" %>
     </div>
 
-
-    <%@include file="componentesDashboard/footer.jsp" %>
