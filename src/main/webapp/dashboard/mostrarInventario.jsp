@@ -44,6 +44,7 @@
                             <div class=" mb-0 row">
                                 <div class="d-grid col-md-3"><button class="btn btn-primary btn-block" style="background: #1c1e21" type="submit">Buscar</button></div>
                                 <div class="d-grid col-md-3"><a class="btn btn-primary btn-block" style="background: #1c1e21" href="../SVInventario">limpiar</a></div>
+                                <div class="d-grid col-md-6"><a class="btn btn-primary btn-block" style="background: #1c1e21" target="_blank" href="https://docs.google.com/spreadsheets/d/1SIrIh6nJXuRaRzT5XbzbIKbCu3WNBZlu3oHA5HslXqo/edit?gid=0#gid=0">Ver Inventario de la nube</a></div>
                             </div>
                         </div>
                     </form>

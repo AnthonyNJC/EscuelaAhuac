@@ -14,10 +14,8 @@
             <div class="col-md-4">
                 <h5 class="mb-3 text-warning">Actividades</h5>
                 <ul class="list-unstyled">
-                    <li class="mb-2"><a href="#calendar">Calendario escolar</a></li>
                     <li class="mb-2"><a href="#events">Eventos</a></li>
                     <li class="mb-2"><a href="#news">Noticias</a></li>
-                    <li class="mb-2"><a href="#resources">Recursos</a></li>
                 </ul>
             </div>
             <div class="col-md-4">

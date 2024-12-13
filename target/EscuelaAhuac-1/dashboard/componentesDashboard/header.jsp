@@ -1,6 +1,17 @@
+<%@page import="Logica.Docente"%>
 <%@page import="Logica.Usuario"%>
 <!DOCTYPE html>
+<%
+        HttpSession miSession = request.getSession();
+        Usuario usuario = (Usuario) miSession.getAttribute("usuarioLogeado");
+
+        if (usuario == null) {
+            response.sendRedirect("../loginNecesario.jsp");
+            return;
+        }
+    %>
 <html lang="en">
+    
     <head>
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -13,14 +24,7 @@
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
 
         <!-- Validacion session-->
-        <%
-            HttpSession miSession = request.getSession();
-            Usuario usuario = (Usuario) miSession.getAttribute("usuarioLogeado");
 
-            if(usuario==null){
-            response.sendRedirect("../loginNecesario.jsp");
-            }
-        %>
 
 
     </head>

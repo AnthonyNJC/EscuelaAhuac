@@ -1,5 +1,6 @@
 <%@page import="Logica.Docente"%>
 <%@page import="Logica.Usuario"%>
+
 <body>
     <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
         <!-- Navbar Brand-->
@@ -16,17 +17,7 @@
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                    <li><form name="editar" action="../SVEditarMaestro" method="GET" class="dropdown-item"> <!-- esto es para mandar el codigo al servlet -->
-                            <button type="submit" >
-                                <i class="fas fa-pencil-alt"></i> Modificar Usuario
-                            </button>
-                            <%
-                                Usuario user1 = (Usuario) request.getSession().getAttribute("usuarioLogeado");
-                                
-                                Docente doc1 = user1.getDocente();
-                            %>
-                            <input type="hidden" name="id" value="<%= doc1.getId() %>"> <!-- esto es para mandar el codigo al servlet -->
-                        </form></li>
+                    <li><a class="dropdown-item" href="../SVEditarLogeado">Modificar Usuario</a></li>
                     <li><hr class="dropdown-divider" /></li>
                     <li><a class="dropdown-item" href="../SVLogin">Cerrar Sessión</a></li>
                 </ul>

@@ -61,7 +61,7 @@
                                                 <select class="form-control" name="inputRol" aria-label="Rol" required >
                                                     <option value="" disabled selected>Seleccione el Rol que tendra el usuario</option>
                                                     <option value="Administrador">Administrador</option>
-                                                    <option value="Administrativo">No-Administrador</option>
+                                                    <option value="No-Administrador">No-Administrador</option>
                                                 </select>
                                                 <label for="inputRol">Rol</label>
                                             </div>

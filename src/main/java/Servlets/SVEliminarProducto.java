@@ -1,6 +1,7 @@
 package Servlets;
 
 import Logica.ControloadoraLogica;
+import Logica.Usuario;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -31,12 +32,18 @@ public class SVEliminarProducto extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
+        Usuario usuario = (Usuario) request.getSession().getAttribute("usuarioLogeado");
+        
+        if(usuario!=null){
+        
         int id = Integer.parseInt(request.getParameter("id"));
         
         controlLogico.eliminarProducto(id);
     
         response.sendRedirect("SVInventario");
-        
+        }else{
+            response.sendRedirect("loginNecesario.jsp");
+        }
     }
 
     

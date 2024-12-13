@@ -3,7 +3,7 @@
 
   <head>
       <%
-      request.getSession().invalidate();
+
       %>
 
     <meta charset="utf-8">

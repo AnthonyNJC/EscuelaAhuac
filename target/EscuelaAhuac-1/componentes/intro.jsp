@@ -27,8 +27,8 @@
                 <h4><i class="fa fa-pencil"></i>Sobre Nosotros</h4>
               </div>
               <div class="content-hide">
-                <p>Somos un colegio de la region Ahuac Chupaca que brinda educacion en los niveles primario y secundario</p>
-                <p class="hidden-sm">EAE MANITO</p>
+                <p>Somos una institución educativa de la región Ahuac Chupaca que brinda educacion en los niveles inicial, primario y secundario</p>
+                <p class="hidden-sm">Nuestra Señora de Fátima</p>
                 <div class="scroll-to-section"><a href="#section5">Más Información</a></div>
             </div>
             </div>

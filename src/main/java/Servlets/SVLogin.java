@@ -28,7 +28,7 @@ public class SVLogin extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         // Invalida la sesión
-        request.getSession().invalidate();
+        request.getSession().setAttribute("usuarioLogeado", null);
         // Redirige al login u otra página
         response.sendRedirect("index.jsp");
     }
@@ -45,7 +45,8 @@ public class SVLogin extends HttpServlet {
         String hashedPassword = PasswordUtil.hashPassword(contrasenia);
         boolean validacion = false;
         validacion = controlLogico.comprobarIngreso(usuario, hashedPassword);
-        
+                    System.out.println("la contra: "+hashedPassword);
+
         
         if(validacion == true){
             Usuario user = controlLogico.usuarioId(usuario, hashedPassword);

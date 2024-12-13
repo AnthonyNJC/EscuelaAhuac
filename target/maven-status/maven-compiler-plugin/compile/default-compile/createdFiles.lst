@@ -19,6 +19,7 @@ Logica\Usuario.class
 Servlets\SVBuscarEstudiante.class
 Servlets\SVEditarEstudiante.class
 Logica\Estudiante_.class
+Servlets\SVEditarLogeado.class
 Logica\Usuario_.class
 Persistencia\EstudianteJpaController.class
 Logica\Persona.class
